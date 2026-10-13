@@ -1,0 +1,86 @@
+{
+  "knowledge_base_version": "module5_authoritative_v1",
+  "review_date": "2026-10-12",
+  "documents": [
+    {
+      "document_id": "fbi-ato-financial-support-2025",
+      "title": "Account Takeover Fraud via Impersonation of Financial Institution Support",
+      "source_url": "https://www.fbi.gov/investigate/cyber/alerts/2025/account-takeover-fraud-via-impersonation-of-financial-institution-support",
+      "date_type": "publication",
+      "date": "2025-11-25",
+      "source_locator": "HTML: How It Works; Social Engineering; Stay Protected; What To Do in Case of an ATO Incident"
+    },
+    {
+      "document_id": "fbi-money-mule-awareness-2019",
+      "title": "Your Bank Account Could Be Fueling Crime",
+      "source_url": "https://www.fbi.gov/news/stories/money-muling-is-illegal-120419",
+      "date_type": "publication",
+      "date": "2019-12-04",
+      "source_locator": "HTML: Money Mules; Signs You May Be Acting as a Money Mule; How to Respond"
+    },
+    {
+      "document_id": "ic3-bec-psa-2024",
+      "title": "Business Email Compromise: The $55 Billion Scam",
+      "source_url": "https://www.ic3.gov/PSA/2024/PSA240911",
+      "date_type": "publication",
+      "date": "2024-09-11",
+      "source_locator": "HTML: Definition section"
+    },
+    {
+      "document_id": "ic3-social-engineering-psa-2024",
+      "title": "Cyber Criminals Target Victims Using Social Engineering Techniques",
+      "source_url": "https://www.ic3.gov/PSA/2024/PSA240411",
+      "date_type": "publication",
+      "date": "2024-04-11",
+      "source_locator": "HTML: Social Engineering Techniques; Victim Reporting and Additional Information"
+    },
+    {
+      "document_id": "ic3-annual-report-2024",
+      "title": "2024 IC3 Annual Report",
+      "source_url": "https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf",
+      "date_type": "access",
+      "date": "2026-10-12",
+      "source_locator": "PDF pages 29-30: Three Year Comparison tables"
+    },
+    {
+      "document_id": "fincen-imposter-mule-advisory-2020",
+      "title": "Advisory on Imposter Scams and Money Mule Schemes Related to Coronavirus Disease 2019 (COVID-19)",
+      "source_url": "https://www.fincen.gov/resources/advisories/fincen-advisory-fin-2020-a003",
+      "date_type": "publication",
+      "date": "2020-07-07",
+      "source_locator": "PDF pages 1-3: Introduction and imposter/money-mule red flags"
+    },
+    {
+      "document_id": "ftc-payment-apps-2023",
+      "title": "Do you use payment apps like Venmo, CashApp, or Zelle? Read this",
+      "source_url": "https://consumer.ftc.gov/consumer-alerts/2023/08/do-you-use-payment-apps-venmo-cashapp-or-zelle-read",
+      "date_type": "publication",
+      "date": "2023-08-14",
+      "source_locator": "HTML: In another scam involving Zelle; The truth is"
+    },
+    {
+      "document_id": "ftc-what-to-do-scammed",
+      "title": "What To Do if You Were Scammed",
+      "source_url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
+      "date_type": "access",
+      "date": "2026-10-12",
+      "source_locator": "HTML: How To Get Your Money Back; compromised information; reporting"
+    },
+    {
+      "document_id": "ftc-business-impersonator-scams",
+      "title": "Business Impersonator Scams",
+      "source_url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams",
+      "date_type": "access",
+      "date": "2026-10-12",
+      "source_locator": "HTML: Here's how they work; Here's what to do"
+    },
+    {
+      "document_id": "cisa-phishing-guidance-phase-one",
+      "title": "Phishing Guidance: Stopping the Attack Cycle at Phase One",
+      "source_url": "https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf",
+      "date_type": "access",
+      "date": "2026-10-12",
+      "source_locator": "PDF page 5: Malware-Based Phishing; Example Techniques; Protecting Login Credentials"
+    }
+  ]
+}

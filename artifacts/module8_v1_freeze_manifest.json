@@ -1,0 +1,50 @@
+{
+  "schema_version": "module8_v1_freeze_manifest_v1",
+  "version": "module8_v1_frozen",
+  "status": "frozen_research_prototype",
+  "scope": "Module 8 cybersecurity validation and local security maintenance boundaries",
+  "security_source_sha256": {
+    "src/security/input_validation.py": "428032381a107fbd5a502435155f27473717a7a7b8eb5c8844be5a238ef1e113",
+    "src/security/storage_security.py": "a9939ed9dc8e47e478c914c40b4d00cf0b3fa0076636dab16f0759022fbd319e",
+    "src/security/dashboard_access.py": "3bd8900731c7f936aed99419c5bb96b7db1271352d13b4de6c844c5052d8ed44",
+    "src/risk_engine/trusted_artifacts.py": "329d051b9a49fcf52830209e7a8d381e8ebeda20fa0203602dec3d863c72514d",
+    "src/risk_engine/final_architecture.py": "b3a76e26c0271ddf2cf14bad0957978e8eeabbe968be64454795d19a20554758",
+    "src/risk_engine/run_development_evaluation.py": "36e43d9b17846d6267fa746e9250712bd3bd774b616603f44d73e45e37fdf4ff",
+    "src/dashboard/app.py": "725c1119a6074ea527690f7d7ce8f58f5ad98bc287c66dfb9660f7b4d211e16a",
+    "src/dashboard/secure_app.py": "750b067c5602b1ce212bf11f65009d6c0bec83b94105f7ff1310a78fc9a3d36d"
+  },
+  "configuration_sha256": {
+    "requirements.txt": "d5a7e19fdbc745f97a5c05633beae2992ebf466b520c0840a1671669574aa25d",
+    "configs/module7_stage5_monitoring_v1.json": "2446237b2cc688531610788d6d01e5b032cfb89f36f55c8548d118ee7d8c1224"
+  },
+  "test_evidence": {
+    "stage6_tests": "8 passed",
+    "required_matrix": "113 passed, 1 skipped",
+    "full_suite": "211 passed, 1 skipped",
+    "skipped": "Windows symlink-escape test; link creation unavailable on host"
+  },
+  "frozen_baselines": {
+    "module4_score_cache_sha256": "16ab136cab8313db935fb30a6f182ddd15db7de28c9d76bdfa089345a35f9410",
+    "module5_freeze_manifest_sha256": "cba41469946685007cf475c3bfe2661076b19ca028bc883d1920f724aaa6d83c",
+    "module6_freeze_manifest_sha256": "3d286b4f2e5fceca079c294a0be54ff80ad6286c7e1c34bbd687da4c924006fc",
+    "module7_freeze_manifest_sha256": "8a6ce8bb8cab6c0437ac3ad63744b907dbf4688957bbf4fcbbc88eec26b280c3"
+  },
+  "threat_coverage": {
+    "covered": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09", "T10", "T11", "T12", "T13", "T14"],
+    "supported_path_bypasses_remaining": false,
+    "production_controls_remaining": ["authentication", "signed_sessions", "managed_rbac", "authenticated_artifact_provenance", "dependency_locking"]
+  },
+  "reproducibility": {
+    "module7_calculation_outputs_equal_after_timestamp_removal": true,
+    "module7_output_checksums_verified": true,
+    "module7_complete_step_enforcement_verified": true,
+    "module7_source_alignment_verified": true,
+    "module7_threshold_consistency_verified": true,
+    "module7_privacy_exclusions_verified": true,
+    "models_retrained": false,
+    "final_holdout_rescored": false,
+    "threshold_changed": false
+  },
+  "limitations_document": "docs/module8_v1_security_limitations.md",
+  "freeze_decision": "approved_for_research_prototype_scope; not production security certification"
+}

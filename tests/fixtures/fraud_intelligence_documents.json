@@ -1,0 +1,50 @@
+[
+  {
+    "document_id": "synthetic-fixture-velocity-001",
+    "title": "Illustrative velocity pattern",
+    "category": "transaction_velocity",
+    "description": "Synthetic fixture only; repeated transfers in a short interval may warrant review.",
+    "behavioral_indicators": ["repeated transfers", "short interval"],
+    "investigative_considerations": ["review prior recipient history"],
+    "source_organization": "Module 5 test fixture",
+    "source_url": "synthetic://module5/velocity",
+    "source_type": "illustrative_synthetic",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "1.0",
+    "content": "Synthetic fixture: repeated transfers to a new recipient may warrant review.",
+    "content_checksum": "698d99c0a91d2070d3af9d3eca6f5f9162fc8c730d5ff8bbbf286ee6e969aa80",
+    "knowledge_base_version": "module5_fixture_v1"
+  },
+  {
+    "document_id": "synthetic-fixture-mule-002",
+    "title": "Illustrative rapid movement pattern",
+    "category": "mule_activity",
+    "description": "Synthetic fixture only; rapid movement across recipients is an illustrative review pattern.",
+    "behavioral_indicators": ["rapid movement", "multiple recipients"],
+    "investigative_considerations": ["review linked accounts and transaction sequence"],
+    "source_organization": "Module 5 test fixture",
+    "source_url": "synthetic://module5/mule",
+    "source_type": "illustrative_synthetic",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "1.0",
+    "content": "Synthetic fixture: rapid movement across recipients is an illustrative review pattern.",
+    "content_checksum": "5a0b1328827ed899a3b42f98a71290fd208e02d9016f57f36f217435f98b0362",
+    "knowledge_base_version": "module5_fixture_v1"
+  },
+  {
+    "document_id": "synthetic-fixture-social-003",
+    "title": "Illustrative social engineering pattern",
+    "category": "social_engineering",
+    "description": "Synthetic fixture only; an unexpected payment request may be consistent with social engineering.",
+    "behavioral_indicators": ["unexpected request", "urgent payment language"],
+    "investigative_considerations": ["confirm the request through a trusted channel"],
+    "source_organization": "Module 5 test fixture",
+    "source_url": "synthetic://module5/social",
+    "source_type": "illustrative_synthetic",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "1.0",
+    "content": "Synthetic fixture: an unexpected payment request may be consistent with social engineering.",
+    "content_checksum": "54074b5bb6b01b0ed63482fe9fd943353b4fcc1e444110b19da3e069734a7433",
+    "knowledge_base_version": "module5_fixture_v1"
+  }
+]

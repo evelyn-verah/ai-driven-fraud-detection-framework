@@ -1,0 +1,613 @@
+{
+  "baseline_development_fixture": {
+    "case_count": 12,
+    "citation_correctness": 1.0,
+    "filter_correctness": 1.0,
+    "mean_reciprocal_rank": 0.7592592592592592,
+    "no_evidence_case_count": 3,
+    "no_evidence_rejection_accuracy": 0.6666666666666666,
+    "precision_at_3": 0.3333333333333333,
+    "recall_at_3": 0.7037037037037037,
+    "relevant_case_count": 9
+  },
+  "baseline_existing_31": {
+    "case_count": 31,
+    "citation_correctness": 1.0,
+    "filter_correctness": 1.0,
+    "mean_reciprocal_rank": 0.9197530864197531,
+    "no_evidence_case_count": 4,
+    "no_evidence_rejection_accuracy": 0.75,
+    "precision_at_3": 0.4444444444444444,
+    "recall_at_3": 0.8641975308641976,
+    "relevant_case_count": 27
+  },
+  "change": "domain-aware deterministic query normalization with meaningful-token gate and conservative transfer-pattern expansion",
+  "development_fixture_path": "data/fraud_intelligence/authoritative_retrieval_development.json",
+  "diagnosis": {
+    "transfer-02": "Incoming/outgoing/counterparties/sequence were out of vocabulary; expansion maps this pattern to indexed suspicious transfer, money mule, and red-flag terms.",
+    "unrelated-03": "Only generic in-vocabulary token analysis overlapped FinCEN chunk; domain gate returns no evidence."
+  },
+  "evaluation_version": "module5_stage6d_retrieval_comparison_v1",
+  "knowledge_base_version": "module5_authoritative_v1",
+  "known_failure_resolution": {
+    "transfer-02": "resolved: FBI money-mule and FinCEN documents both rank in top three",
+    "unrelated-03": "resolved: no evidence returned"
+  },
+  "limitations": [
+    "The independent fixtures are small diagnostic sets, not production effectiveness estimates.",
+    "Synonym normalization remains lexical and should be reviewed as the authoritative corpus grows."
+  ],
+  "partial_retrieval_misses": {
+    "development": [
+      {
+        "case_id": "dev-ambiguous",
+        "missing_document_ids": [
+          "fincen-imposter-mule-advisory-2020"
+        ]
+      },
+      {
+        "case_id": "dev-multi",
+        "missing_document_ids": [
+          "ftc-business-impersonator-scams",
+          "ic3-social-engineering-psa-2024"
+        ]
+      }
+    ],
+    "existing_31": [
+      {
+        "case_id": "phishing-03",
+        "missing_document_ids": [
+          "cisa-phishing-guidance-phase-one"
+        ]
+      },
+      {
+        "case_id": "social-03",
+        "missing_document_ids": [
+          "cisa-phishing-guidance-phase-one"
+        ]
+      },
+      {
+        "case_id": "bec-02",
+        "missing_document_ids": [
+          "fbi-money-mule-awareness-2019"
+        ]
+      },
+      {
+        "case_id": "transfer-01",
+        "missing_document_ids": [
+          "fbi-money-mule-awareness-2019"
+        ]
+      },
+      {
+        "case_id": "ambiguous-02",
+        "missing_document_ids": [
+          "fincen-imposter-mule-advisory-2020"
+        ]
+      },
+      {
+        "case_id": "ambiguous-03",
+        "missing_document_ids": [
+          "ic3-social-engineering-psa-2024"
+        ]
+      }
+    ]
+  },
+  "revised_case_results": {
+    "development": [
+      {
+        "case_id": "dev-ato-paraphrase",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025"
+        ],
+        "normalized_query": "support agent impersonation asks for login verification code before account access",
+        "returned_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-social-engineering-psa-2024",
+          "cisa-phishing-guidance-phase-one"
+        ]
+      },
+      {
+        "case_id": "dev-phish-paraphrase",
+        "expected_document_ids": [
+          "cisa-phishing-guidance-phase-one",
+          "ftc-business-impersonator-scams"
+        ],
+        "normalized_query": "trusted brand lure sends malicious link to steal credential",
+        "returned_document_ids": [
+          "cisa-phishing-guidance-phase-one",
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams"
+        ]
+      },
+      {
+        "case_id": "dev-social-paraphrase",
+        "expected_document_ids": [
+          "ic3-social-engineering-psa-2024"
+        ],
+        "normalized_query": "sim sim account and forwarding call expose banking account",
+        "returned_document_ids": [
+          "ic3-social-engineering-psa-2024",
+          "ic3-annual-report-2024",
+          "fbi-money-mule-awareness-2019"
+        ]
+      },
+      {
+        "case_id": "dev-mule-paraphrase",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019"
+        ],
+        "normalized_query": "new job asks worker to receive and send funds through personal account",
+        "returned_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams"
+        ]
+      },
+      {
+        "case_id": "dev-bec-paraphrase",
+        "expected_document_ids": [
+          "ic3-bec-psa-2024"
+        ],
+        "normalized_query": "supplier email compromise leads to unauthorized transfer instructions",
+        "returned_document_ids": [
+          "ic3-bec-psa-2024",
+          "fincen-imposter-mule-advisory-2020",
+          "ic3-annual-report-2024"
+        ]
+      },
+      {
+        "case_id": "dev-payment-paraphrase",
+        "expected_document_ids": [
+          "ftc-payment-apps-2023"
+        ],
+        "normalized_query": "fake bank representative tells customer to move payment app money",
+        "returned_document_ids": [
+          "ftc-payment-apps-2023",
+          "fbi-money-mule-awareness-2019",
+          "ftc-business-impersonator-scams"
+        ]
+      },
+      {
+        "case_id": "dev-transfer-paraphrase",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "suspicious receive and transfer funds move between account in money mule money mule red flags",
+        "returned_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020",
+          "ftc-payment-apps-2023"
+        ]
+      },
+      {
+        "case_id": "dev-ambiguous",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "account receives an unexpected transfer and later sends money onward",
+        "returned_document_ids": [
+          "ftc-payment-apps-2023",
+          "fbi-money-mule-awareness-2019",
+          "ic3-bec-psa-2024"
+        ]
+      },
+      {
+        "case_id": "dev-multi",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-social-engineering-psa-2024",
+          "ftc-business-impersonator-scams"
+        ],
+        "normalized_query": "impersonation message requests credential and then rapid funds transfer",
+        "returned_document_ids": [
+          "ic3-bec-psa-2024",
+          "fbi-ato-financial-support-2025",
+          "fbi-money-mule-awareness-2019"
+        ]
+      },
+      {
+        "case_id": "dev-unrelated-music",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      },
+      {
+        "case_id": "dev-unrelated-garden",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      },
+      {
+        "case_id": "dev-unrelated-space",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      }
+    ],
+    "existing_31": [
+      {
+        "case_id": "ato-01",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025"
+        ],
+        "normalized_query": "financial institution support impersonation account account credential",
+        "returned_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-social-engineering-psa-2024",
+          "fbi-money-mule-awareness-2019"
+        ]
+      },
+      {
+        "case_id": "ato-02",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-social-engineering-psa-2024"
+        ],
+        "normalized_query": "mfa code phishing fraudulent banking login page",
+        "returned_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-social-engineering-psa-2024",
+          "ftc-what-to-do-scammed"
+        ]
+      },
+      {
+        "case_id": "ato-03",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025"
+        ],
+        "normalized_query": "rapid transfer after online account access",
+        "returned_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-bec-psa-2024",
+          "ic3-social-engineering-psa-2024"
+        ]
+      },
+      {
+        "case_id": "phishing-01",
+        "expected_document_ids": [
+          "cisa-phishing-guidance-phase-one"
+        ],
+        "normalized_query": "malicious link attachment credential phishing",
+        "returned_document_ids": [
+          "cisa-phishing-guidance-phase-one"
+        ]
+      },
+      {
+        "case_id": "phishing-02",
+        "expected_document_ids": [
+          "cisa-phishing-guidance-phase-one"
+        ],
+        "normalized_query": "phishing sms collaboration platform lure",
+        "returned_document_ids": [
+          "cisa-phishing-guidance-phase-one"
+        ]
+      },
+      {
+        "case_id": "phishing-03",
+        "expected_document_ids": [
+          "cisa-phishing-guidance-phase-one",
+          "ftc-what-to-do-scammed"
+        ],
+        "normalized_query": "phishing stolen personal information account",
+        "returned_document_ids": [
+          "ftc-business-impersonator-scams",
+          "ic3-bec-psa-2024",
+          "ftc-what-to-do-scammed"
+        ]
+      },
+      {
+        "case_id": "social-01",
+        "expected_document_ids": [
+          "ic3-social-engineering-psa-2024"
+        ],
+        "normalized_query": "employee impersonation sim swap call forwarding",
+        "returned_document_ids": [
+          "ic3-social-engineering-psa-2024",
+          "ic3-annual-report-2024",
+          "fbi-ato-financial-support-2025"
+        ]
+      },
+      {
+        "case_id": "social-02",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-social-engineering-psa-2024"
+        ],
+        "normalized_query": "social engineering request for password pin one time password",
+        "returned_document_ids": [
+          "ic3-social-engineering-psa-2024",
+          "fbi-ato-financial-support-2025",
+          "ic3-bec-psa-2024"
+        ]
+      },
+      {
+        "case_id": "social-03",
+        "expected_document_ids": [
+          "cisa-phishing-guidance-phase-one",
+          "ftc-business-impersonator-scams"
+        ],
+        "normalized_query": "unexpected message trusted company asks for computer access",
+        "returned_document_ids": [
+          "ftc-business-impersonator-scams",
+          "fbi-ato-financial-support-2025",
+          "ic3-bec-psa-2024"
+        ]
+      },
+      {
+        "case_id": "payment-01",
+        "expected_document_ids": [
+          "ftc-payment-apps-2023"
+        ],
+        "normalized_query": "payment app bank impersonator move money new account",
+        "returned_document_ids": [
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams",
+          "fbi-money-mule-awareness-2019"
+        ]
+      },
+      {
+        "case_id": "payment-02",
+        "expected_document_ids": [
+          "ftc-payment-apps-2023"
+        ],
+        "normalized_query": "zelle scam verify payment request difficult reverse",
+        "returned_document_ids": [
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams"
+        ]
+      },
+      {
+        "case_id": "payment-03",
+        "expected_document_ids": [
+          "ftc-payment-apps-2023",
+          "ftc-what-to-do-scammed"
+        ],
+        "normalized_query": "payment app scam response contact provider quickly",
+        "returned_document_ids": [
+          "ftc-what-to-do-scammed",
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams"
+        ]
+      },
+      {
+        "case_id": "mule-01",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "receive and forward illegally obtained funds",
+        "returned_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fbi-ato-financial-support-2025",
+          "fincen-imposter-mule-advisory-2020"
+        ]
+      },
+      {
+        "case_id": "mule-02",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019"
+        ],
+        "normalized_query": "unsolicited job asks personal account transfer money",
+        "returned_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "ic3-bec-psa-2024",
+          "ic3-social-engineering-psa-2024"
+        ]
+      },
+      {
+        "case_id": "mule-03",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "money mule financial red flags reporting context",
+        "returned_document_ids": [
+          "fincen-imposter-mule-advisory-2020",
+          "fbi-money-mule-awareness-2019",
+          "fbi-ato-financial-support-2025"
+        ]
+      },
+      {
+        "case_id": "bec-01",
+        "expected_document_ids": [
+          "ic3-bec-psa-2024"
+        ],
+        "normalized_query": "compromised business email unauthorized transfer request",
+        "returned_document_ids": [
+          "ic3-bec-psa-2024",
+          "ftc-what-to-do-scammed",
+          "ic3-annual-report-2024"
+        ]
+      },
+      {
+        "case_id": "bec-02",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "ic3-bec-psa-2024"
+        ],
+        "normalized_query": "social engineering email account compromise payment instructions",
+        "returned_document_ids": [
+          "ic3-bec-psa-2024",
+          "ftc-payment-apps-2023",
+          "fbi-ato-financial-support-2025"
+        ]
+      },
+      {
+        "case_id": "bec-03",
+        "expected_document_ids": [
+          "ic3-bec-psa-2024"
+        ],
+        "normalized_query": "legitimate looking funds transfer personal information account compromise",
+        "returned_document_ids": [
+          "ic3-bec-psa-2024",
+          "ftc-business-impersonator-scams",
+          "ic3-annual-report-2024"
+        ]
+      },
+      {
+        "case_id": "transfer-01",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "rapid movement layering illicit proceeds account profile",
+        "returned_document_ids": [
+          "fincen-imposter-mule-advisory-2020",
+          "ic3-bec-psa-2024"
+        ]
+      },
+      {
+        "case_id": "transfer-02",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "suspicious receive transfer transfers account money mule money mule red flags",
+        "returned_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020",
+          "ic3-bec-psa-2024"
+        ]
+      },
+      {
+        "case_id": "transfer-03",
+        "expected_document_ids": [
+          "ftc-payment-apps-2023",
+          "ftc-what-to-do-scammed"
+        ],
+        "normalized_query": "hard to reverse wire cryptocurrency payment fraud response",
+        "returned_document_ids": [
+          "ftc-what-to-do-scammed",
+          "ftc-business-impersonator-scams",
+          "ftc-payment-apps-2023"
+        ]
+      },
+      {
+        "case_id": "ambiguous-01",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams"
+        ],
+        "normalized_query": "trusted person asks urgently to move money",
+        "returned_document_ids": [
+          "ftc-payment-apps-2023",
+          "fbi-money-mule-awareness-2019",
+          "ftc-business-impersonator-scams"
+        ]
+      },
+      {
+        "case_id": "ambiguous-02",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025",
+          "ic3-bec-psa-2024",
+          "fincen-imposter-mule-advisory-2020"
+        ],
+        "normalized_query": "suspicious account access and transfer",
+        "returned_document_ids": [
+          "ic3-social-engineering-psa-2024",
+          "ic3-bec-psa-2024",
+          "fbi-ato-financial-support-2025"
+        ]
+      },
+      {
+        "case_id": "ambiguous-03",
+        "expected_document_ids": [
+          "cisa-phishing-guidance-phase-one",
+          "ic3-social-engineering-psa-2024",
+          "ftc-business-impersonator-scams"
+        ],
+        "normalized_query": "credential request through unexpected message",
+        "returned_document_ids": [
+          "ftc-business-impersonator-scams",
+          "ftc-payment-apps-2023",
+          "cisa-phishing-guidance-phase-one"
+        ]
+      },
+      {
+        "case_id": "unrelated-01",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      },
+      {
+        "case_id": "unrelated-02",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      },
+      {
+        "case_id": "unrelated-03",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      },
+      {
+        "case_id": "unrelated-04",
+        "expected_document_ids": [],
+        "normalized_query": "",
+        "returned_document_ids": []
+      },
+      {
+        "case_id": "filter-01",
+        "expected_document_ids": [
+          "ftc-payment-apps-2023"
+        ],
+        "normalized_query": "impersonation payment request",
+        "returned_document_ids": [
+          "ftc-payment-apps-2023",
+          "ftc-business-impersonator-scams",
+          "ftc-what-to-do-scammed"
+        ]
+      },
+      {
+        "case_id": "filter-02",
+        "expected_document_ids": [
+          "fbi-ato-financial-support-2025"
+        ],
+        "normalized_query": "account access phishing credential",
+        "returned_document_ids": [
+          "ic3-social-engineering-psa-2024",
+          "cisa-phishing-guidance-phase-one",
+          "fbi-ato-financial-support-2025"
+        ]
+      },
+      {
+        "case_id": "filter-03",
+        "expected_document_ids": [
+          "fbi-money-mule-awareness-2019"
+        ],
+        "normalized_query": "money mule receive forward funds",
+        "returned_document_ids": [
+          "fbi-money-mule-awareness-2019",
+          "fincen-imposter-mule-advisory-2020",
+          "fbi-ato-financial-support-2025"
+        ]
+      }
+    ]
+  },
+  "revised_development_fixture": {
+    "case_count": 12,
+    "citation_correctness": 1.0,
+    "filter_correctness": 1.0,
+    "mean_reciprocal_rank": 0.8888888888888888,
+    "no_evidence_case_count": 3,
+    "no_evidence_rejection_accuracy": 1.0,
+    "precision_at_3": 0.4074074074074074,
+    "recall_at_3": 0.8703703703703703,
+    "relevant_case_count": 9
+  },
+  "revised_existing_31": {
+    "case_count": 31,
+    "citation_correctness": 1.0,
+    "filter_correctness": 1.0,
+    "mean_reciprocal_rank": 0.9320987654320988,
+    "no_evidence_case_count": 4,
+    "no_evidence_rejection_accuracy": 1.0,
+    "precision_at_3": 0.4691358024691358,
+    "recall_at_3": 0.9012345679012346,
+    "relevant_case_count": 27
+  }
+}

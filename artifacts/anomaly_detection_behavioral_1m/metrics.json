@@ -1,0 +1,177 @@
+{
+  "dataset": "PaySim simulated mobile-money transactions",
+  "method": "Matched Isolation Forest comparison",
+  "training_type": "unsupervised",
+  "input_file": "data/raw/PS_20174392719_1491204439457_log.csv",
+  "rows_loaded": 1000000,
+  "split": "same 70% chronological boundary as original Module 3 baseline; no shared steps",
+  "train_rows": 699825,
+  "test_rows": 300175,
+  "train_fraud_count": 417,
+  "test_fraud_count": 118,
+  "train_step_max": 36,
+  "test_step_min": 37,
+  "alert_counts": [
+    10,
+    50,
+    100,
+    500
+  ],
+  "tuning": "No tuning was performed against the final test period; the original Isolation Forest configuration was retained for both models.",
+  "activity_analysis": {
+    "rows": 1000000,
+    "unique_origin_accounts": 999759,
+    "unique_destination_accounts": 422896,
+    "origin_accounts_repeated": 241,
+    "destination_accounts_repeated": 76035,
+    "rows_from_repeated_origins_rate": 0.000482,
+    "rows_to_repeated_destinations_rate": 0.653139,
+    "train_origin_accounts": 699717,
+    "train_destination_accounts": 301268,
+    "test_rows_with_prior_sender_history": 114,
+    "test_rows_with_prior_sender_history_rate": 0.00037977846256350464,
+    "test_rows_with_prior_receiver_history": 154110,
+    "test_rows_with_prior_receiver_history_rate": 0.5134005163654535,
+    "test_senders_seen_in_training": 114,
+    "test_receivers_seen_in_training": 55604,
+    "behavioral_feature_nonzero_rates": {
+      "sender_txn_count_prior": {
+        "all_rows_nonzero_rate": 0.000229,
+        "train_rows_nonzero_rate": 0.00014146393741292467,
+        "test_rows_nonzero_rate": 0.00043308070292329473
+      },
+      "sender_velocity_3_steps_prior": {
+        "all_rows_nonzero_rate": 3.2e-05,
+        "train_rows_nonzero_rate": 3.0007501875468866e-05,
+        "test_rows_nonzero_rate": 3.664529024735571e-05
+      },
+      "sender_avg_amount_prior": {
+        "all_rows_nonzero_rate": 0.000229,
+        "train_rows_nonzero_rate": 0.00014146393741292467,
+        "test_rows_nonzero_rate": 0.00043308070292329473
+      },
+      "sender_amount_ratio_to_avg_prior": {
+        "all_rows_nonzero_rate": 0.000229,
+        "train_rows_nonzero_rate": 0.00014146393741292467,
+        "test_rows_nonzero_rate": 0.00043308070292329473
+      },
+      "sender_same_type_count_prior": {
+        "all_rows_nonzero_rate": 6e-05,
+        "train_rows_nonzero_rate": 3.143643053620548e-05,
+        "test_rows_nonzero_rate": 0.00012659282085450153
+      },
+      "sender_same_type_share_prior": {
+        "all_rows_nonzero_rate": 6e-05,
+        "train_rows_nonzero_rate": 3.143643053620548e-05,
+        "test_rows_nonzero_rate": 0.00012659282085450153
+      },
+      "receiver_txn_count_prior": {
+        "all_rows_nonzero_rate": 0.543224,
+        "train_rows_nonzero_rate": 0.5252813203300826,
+        "test_rows_nonzero_rate": 0.5850553843591239
+      },
+      "receiver_avg_amount_prior": {
+        "all_rows_nonzero_rate": 0.543224,
+        "train_rows_nonzero_rate": 0.5252813203300826,
+        "test_rows_nonzero_rate": 0.5850553843591239
+      },
+      "receiver_amount_ratio_to_avg_prior": {
+        "all_rows_nonzero_rate": 0.543224,
+        "train_rows_nonzero_rate": 0.5252813203300826,
+        "test_rows_nonzero_rate": 0.5850553843591239
+      }
+    },
+    "history_definition": "Training-account membership is measured using rows from earlier steps only; same-step rows are not used as history."
+  },
+  "baseline": {
+    "average_precision": 0.0030638821122728334,
+    "roc_auc": 0.6738732493933497,
+    "alerts": {
+      "10": {
+        "requested": 10,
+        "reviewed": 10,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "50": {
+        "requested": 50,
+        "reviewed": 50,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "100": {
+        "requested": 100,
+        "reviewed": 100,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "500": {
+        "requested": 500,
+        "reviewed": 500,
+        "fraud_detected": 2,
+        "precision": 0.004,
+        "recall": 0.01694915254237288
+      }
+    },
+    "features": [
+      "amount",
+      "oldbalanceOrg",
+      "oldbalanceDest",
+      "step"
+    ]
+  },
+  "behavioral": {
+    "average_precision": 0.012156536717167361,
+    "roc_auc": 0.6361905927139381,
+    "alerts": {
+      "10": {
+        "requested": 10,
+        "reviewed": 10,
+        "fraud_detected": 1,
+        "precision": 0.1,
+        "recall": 0.00847457627118644
+      },
+      "50": {
+        "requested": 50,
+        "reviewed": 50,
+        "fraud_detected": 2,
+        "precision": 0.04,
+        "recall": 0.01694915254237288
+      },
+      "100": {
+        "requested": 100,
+        "reviewed": 100,
+        "fraud_detected": 3,
+        "precision": 0.03,
+        "recall": 0.025423728813559324
+      },
+      "500": {
+        "requested": 500,
+        "reviewed": 500,
+        "fraud_detected": 6,
+        "precision": 0.012,
+        "recall": 0.05084745762711865
+      }
+    },
+    "features": [
+      "amount",
+      "oldbalanceOrg",
+      "oldbalanceDest",
+      "step",
+      "sender_txn_count_prior",
+      "sender_velocity_3_steps_prior",
+      "sender_avg_amount_prior",
+      "sender_amount_ratio_to_avg_prior",
+      "sender_same_type_count_prior",
+      "sender_same_type_share_prior",
+      "receiver_txn_count_prior",
+      "receiver_avg_amount_prior",
+      "receiver_amount_ratio_to_avg_prior"
+    ]
+  },
+  "behavioral_feature_policy": "All account and transaction-history aggregates use prior simulation steps only. Transactions within the same step do not update one another's features.",
+  "limitations": "PaySim is simulated. Anomaly scores do not establish that a transaction is fraudulent. This is an independent benchmark, not a production deployment."
+}

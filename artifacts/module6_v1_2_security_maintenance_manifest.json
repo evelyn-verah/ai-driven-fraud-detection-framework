@@ -1,0 +1,71 @@
+{
+  "schema_version": "module6_v1_2_security_maintenance_manifest_v1",
+  "maintenance_version": "module6_dashboard_v1_2_security",
+  "status": "complete",
+  "created_at_utc": "2026-10-13T00:00:00Z",
+  "scope": "Separate authorized execution boundary for the local research dashboard",
+  "historical_baselines": {
+    "module6_v1_manifest": {
+      "path": "artifacts/module6_v1_freeze_manifest.json",
+      "sha256": "3d286b4f2e5fceca079c294a0be54ff80ad6286c7e1c34bbd687da4c924006fc"
+    },
+    "module6_v1_1_manifest": {
+      "path": "artifacts/module6_v1_1/module6_v1_1_maintenance_manifest.json",
+      "sha256": "198d31946a5177a57cc07372437e80191d1a60f70c201f9fd9194c7a65666382"
+    },
+    "module4_score_cache": {
+      "path": "artifacts/module4_final_holdout_recovery_v1/complete_holdout_scores.csv",
+      "sha256": "16ab136cab8313db935fb30a6f182ddd15db7de28c9d76bdfa089345a35f9410"
+    },
+    "module5_manifest": {
+      "path": "artifacts/module5_authoritative_v1/module5_v1_freeze_manifest.json",
+      "sha256": "cba41469946685007cf475c3bfe2661076b19ca028bc883d1920f724aaa6d83c"
+    },
+    "module7_manifest": {
+      "path": "artifacts/module7_v1_freeze_manifest.json",
+      "sha256": "8a6ce8bb8cab6c0437ac3ad63744b907dbf4688957bbf4fcbbc88eec26b280c3"
+    }
+  },
+  "changed_code": {
+    "src/dashboard/app.py": "725c1119a6074ea527690f7d7ce8f58f5ad98bc287c66dfb9660f7b4d211e16a",
+    "src/dashboard/secure_app.py": "750b067c5602b1ce212bf11f65009d6c0bec83b94105f7ff1310a78fc9a3d36d",
+    "src/security/dashboard_access.py": "3bd8900731c7f936aed99419c5bb96b7db1271352d13b4de6c844c5052d8ed44",
+    "tests/test_module6_v1_2_security_integration.py": "443baed862472cc2044ebe365aa7bafade99068e3cb6643d350bcb91fa4417b9",
+    "tests/test_module8_stage5_security_regression.py": "4faa6bc8ee9ad2435ae1145e3d7c385e2579670a21e0eb7bb66df593cd709869",
+    "docs/module6_v1_2_security_maintenance.md": "294fc18aa4923556d1a92778ee63473cf5ebd582f7a6456a70966c14584ee4ee"
+  },
+  "security_boundaries": {
+    "authorization": "Stage 4 DashboardContext and permission checks before every secure operation",
+    "identity": "No production identity provider; explicit development-only trusted-local test marker",
+    "privacy": ["isFraud", "isFlaggedFraud", "nameOrig", "nameDest", "reviewer identities", "free-text notes", "training labels", "unverified fraud outcomes"],
+    "feedback": "Stage 3 validated writer and aggregate-only reader",
+    "diagnostics": "Bounded cache metadata without sensitive fields"
+  },
+  "launcher_migration": {
+    "historical_source_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/app.py",
+    "historical_v1_snapshot_sha256": "0818cf7b63dba59b54b86c493c9452e4a6dfb0930ebae73c4d6b13023d5ae647",
+    "historical_snapshot_matches_module6_v1_manifest": true,
+    "original_working_tree_sha256": "d183f95ed9e0a45de1fdc2da385f88a7d52c2320abcc1fd6395d2b993ca71495",
+    "original_matches_recorded_v1_1_sha256": true,
+    "migrated_launcher_sha256": "725c1119a6074ea527690f7d7ce8f58f5ad98bc287c66dfb9660f7b4d211e16a",
+    "supported_command": "streamlit run src/dashboard/app.py",
+    "unauthenticated_behavior": "deny before score-cache or feedback access",
+    "secure_entry_point": "src/dashboard/secure_app.py"
+  },
+  "validation": {
+    "pre_change_full_suite": "188 passed, 1 skipped",
+    "focused_v1_2_tests": "7 passed",
+    "focused_dashboard_regressions": "35 passed",
+    "full_suite": "195 passed, 1 skipped",
+    "historical_artifacts_unchanged": true,
+    "models_retrained": false,
+    "scores_rescored": false,
+    "threshold_changed": false
+  },
+  "known_limitations": [
+    "The historical Streamlit app.py remains a legacy bypass path until launcher migration.",
+    "The trusted-local context is not authentication and must not be exposed as a user-controlled role selector.",
+    "Real identity, signed sessions, CSRF protection, and deployment authorization are not included.",
+    "Legacy direct joblib loaders remain outside this dashboard maintenance release."
+  ]
+}

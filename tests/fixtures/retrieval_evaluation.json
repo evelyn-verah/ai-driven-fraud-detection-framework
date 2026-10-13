@@ -1,0 +1,7 @@
+[
+  {"query": "repeated transfers short interval new recipient", "expected_document_ids": ["synthetic-fixture-velocity-001"]},
+  {"query": "rapid movement across multiple recipients", "expected_document_ids": ["synthetic-fixture-mule-002"]},
+  {"query": "unexpected payment request social engineering", "expected_document_ids": ["synthetic-fixture-social-003"]},
+  {"query": "quantum spacecraft engine", "expected_document_ids": []},
+  {"query": "payment request", "expected_document_ids": ["synthetic-fixture-social-003"]}
+]

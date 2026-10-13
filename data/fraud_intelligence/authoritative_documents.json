@@ -1,0 +1,252 @@
+[
+  {
+    "document_id": "fbi-ato-financial-support-2025",
+    "title": "Account Takeover Fraud via Impersonation of Financial Institution Support",
+    "category": "account_takeover",
+    "description": "FBI public service announcement describing account takeover schemes in which criminals impersonate financial-institution support and use social engineering or fraudulent sites to obtain credentials and control accounts.",
+    "behavioral_indicators": [
+      "impersonated financial-institution support contact",
+      "request for login credentials, MFA codes, or one-time passcodes",
+      "phishing site resembling a legitimate institution",
+      "rapid transfers after account access"
+    ],
+    "investigative_considerations": [
+      "verify the contact through an independently obtained institution number",
+      "review password-reset and unusual transfer activity",
+      "preserve the suspicious message, URL, and account-access timeline"
+    ],
+    "source_organization": "Federal Bureau of Investigation",
+    "source_url": "https://www.fbi.gov/investigate/cyber/alerts/2025/account-takeover-fraud-via-impersonation-of-financial-institution-support",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2025-11-25",
+    "document_version": "2025-11-25",
+    "content": "The FBI describes account takeover fraud involving impersonation of financial-institution support. The described methods include social engineering by text, call, or email, fraudulent login pages, and requests for credentials or MFA codes. After access is obtained, criminals may move funds quickly to controlled accounts. These are source-described patterns for investigation context, not proof that any individual transaction is fraudulent.",
+    "content_checksum": "b4b6897804a0ad22cfa0f56aefa103364e53876edaa6ac272b91c508f2735674",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "fbi-money-mule-awareness-2019",
+    "title": "Your Bank Account Could Be Fueling Crime",
+    "category": "money_mule",
+    "description": "FBI public guidance on money-mule recruitment and the use of personal accounts to receive and forward illicit funds.",
+    "behavioral_indicators": [
+      "unsolicited work or social-media contact promising easy money",
+      "request to open or use an account to receive and transfer funds",
+      "being allowed to keep part of transferred funds",
+      "forwarding funds to an unknown person"
+    ],
+    "investigative_considerations": [
+      "review the origin, destination, and sequence of incoming and outgoing transfers",
+      "preserve recruitment messages and payment instructions",
+      "avoid treating a possible mule as knowingly complicit without corroborating evidence"
+    ],
+    "source_organization": "Federal Bureau of Investigation",
+    "source_url": "https://www.fbi.gov/news/stories/money-muling-is-illegal-120419",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2019-12-04",
+    "document_version": "2019-12-04",
+    "content": "The FBI explains that a money mule may receive or move illegally obtained money for another person, knowingly or unknowingly. Recruitment signs described by the FBI include unsolicited employment or social-media offers, requests to use a personal or newly formed account, receiving and forwarding funds, and retaining a portion. The guidance recommends preserving communications and notifying the relevant financial institution or law enforcement when a mule scheme is suspected.",
+    "content_checksum": "a3b88013f501b78404aa93e25875c3ffb9a73f0c9ba46f07e78623613cdf5adf",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "ic3-bec-psa-2024",
+    "title": "Business Email Compromise: The $55 Billion Scam",
+    "category": "business_email_compromise",
+    "description": "IC3 public service announcement defining business or email account compromise and its use in unauthorized transfer-of-funds requests.",
+    "behavioral_indicators": [
+      "compromised business or personal email account",
+      "social-engineering or computer-intrusion access",
+      "request to redirect or initiate a legitimate-looking funds transfer",
+      "request for personal information used to compromise related accounts"
+    ],
+    "investigative_considerations": [
+      "independently verify changes to payment instructions",
+      "review account access and message provenance",
+      "retain the original request and related transfer details for reporting"
+    ],
+    "source_organization": "FBI Internet Crime Complaint Center",
+    "source_url": "https://www.ic3.gov/PSA/2024/PSA240911",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2024-09-11",
+    "document_version": "2024-09-11",
+    "content": "IC3 defines business email compromise or email account compromise as a scheme targeting people who perform legitimate transfer-of-funds requests. The announcement describes compromised business or personal email accounts, social engineering or computer intrusion, and unauthorized transfers. It also notes that compromised accounts may be used to obtain personally identifying information for additional account compromise.",
+    "content_checksum": "682be96287461aea55df5b13c4a75146904d54df5f02cbedef9d1ecc55d24975",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "ic3-social-engineering-psa-2024",
+    "title": "Cyber Criminals Target Victims Using Social Engineering Techniques",
+    "category": "social_engineering_account_access",
+    "description": "IC3 announcement covering employee impersonation, SIM-swap, call-forwarding, and phishing techniques used to obtain account access.",
+    "behavioral_indicators": [
+      "impersonation of employees or support personnel",
+      "requests for passwords, PINs, or one-time passwords",
+      "SIM changes, call forwarding, or simultaneous ring",
+      "suspicious login attempts or compromised credentials"
+    ],
+    "investigative_considerations": [
+      "verify requests through a known customer-service channel",
+      "review mobile-account changes and login history",
+      "preserve phishing messages and report suspected social engineering"
+    ],
+    "source_organization": "FBI Internet Crime Complaint Center",
+    "source_url": "https://www.ic3.gov/PSA/2024/PSA240411",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2024-04-11",
+    "document_version": "2024-04-11",
+    "content": "IC3 describes social-engineering techniques used to gain access to financial, corporate, and network accounts. The announcement covers employee impersonation, SIM-swap attacks, call forwarding or simultaneous ring, and phishing. It advises against providing passwords, PINs, or one-time passwords in unsolicited contacts and recommends monitoring account login history and suspicious activity.",
+    "content_checksum": "193ea72157bf536beacf7f76630dbc82908f8f63177f247746e3850efda1d425",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "ic3-annual-report-2024",
+    "title": "2024 IC3 Annual Report",
+    "category": "fraud_taxonomy_context",
+    "description": "IC3 annual report providing an official taxonomy and complaint context for fraud and cyber-enabled crime categories.",
+    "behavioral_indicators": [
+      "phishing or spoofing reports",
+      "business email compromise reports",
+      "identity-theft or personal-data-breach reports",
+      "SIM-swap, cryptocurrency, or tech-support fraud categories"
+    ],
+    "investigative_considerations": [
+      "use the report as category context rather than transaction-level evidence",
+      "record the report year when comparing intelligence versions",
+      "avoid treating complaint counts as prevalence for a specific account or transaction"
+    ],
+    "source_organization": "Federal Bureau of Investigation Internet Crime Complaint Center",
+    "source_url": "https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "access-2026-10-12",
+    "content": "The 2024 IC3 Annual Report organizes reported internet crime into categories including business email compromise, phishing or spoofing, identity theft, personal data breach, SIM swap, tech support, cryptocurrency, and other fraud types. This curated summary uses the report as a terminology and classification reference; complaint statistics are not evidence about an individual transaction.",
+    "content_checksum": "6aee2dcb330b260434d34d63a1d985c73351846a65f8f38a1428ca4bac155665",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "fincen-imposter-mule-advisory-2020",
+    "title": "Advisory on Imposter Scams and Money Mule Schemes Related to Coronavirus Disease 2019 (COVID-19)",
+    "category": "imposter_money_mule",
+    "description": "FinCEN advisory describing imposter scams, money-mule schemes, financial red flags, and suspicious-activity reporting context.",
+    "behavioral_indicators": [
+      "imposter use of trusted organizations or relief themes",
+      "recruitment or movement of funds through money-mule accounts",
+      "rapid movement or layering of illicit proceeds",
+      "transaction patterns inconsistent with an account profile"
+    ],
+    "investigative_considerations": [
+      "use the advisory's red flags as leads rather than proof",
+      "review counterparties, transaction sequence, and stated purpose",
+      "consult applicable compliance procedures before making a suspicious-activity determination"
+    ],
+    "source_organization": "Financial Crimes Enforcement Network",
+    "source_url": "https://www.fincen.gov/resources/advisories/fincen-advisory-fin-2020-a003",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2020-07-07",
+    "document_version": "FIN-2020-A003",
+    "content": "FinCEN's advisory alerts financial institutions to imposter scams and money-mule schemes and provides descriptions, financial red flags, and reporting context. The advisory is based on FinCEN analysis and law-enforcement information related to COVID-19 fraud. Its indicators are investigative leads and do not establish that a particular account or transaction is illicit.",
+    "content_checksum": "15e221883ad2887ce7aad2e40f2d558a7ece166c594078f1b73f93a5aa77b79f",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "ftc-payment-apps-2023",
+    "title": "Do you use payment apps like Venmo, CashApp, or Zelle? Read this",
+    "category": "payment_app_impersonation",
+    "description": "FTC consumer guidance on payment-app impersonation and requests to move money to a supposedly protected account.",
+    "behavioral_indicators": [
+      "person claiming to be a bank or trusted contact",
+      "instruction to transfer money to a new account to protect funds",
+      "request for personal information or passcodes",
+      "pressure to use a difficult-to-reverse payment method"
+    ],
+    "investigative_considerations": [
+      "verify the request using contact information obtained independently",
+      "preserve the message and payment-app transaction details",
+      "contact the financial institution or payment service promptly if fraud is suspected"
+    ],
+    "source_organization": "Federal Trade Commission",
+    "source_url": "https://consumer.ftc.gov/consumer-alerts/2023/08/do-you-use-payment-apps-venmo-cashapp-or-zelle-read",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2023-08-14",
+    "document_version": "2023-08-14",
+    "content": "The FTC describes payment-app scams in which an impostor claims to be a bank or trusted person and instructs the recipient to move money to a new account. The guidance emphasizes independently verifying the request and recognizing that payment-app transfers can be difficult to reverse. It does not classify any individual payment as fraudulent.",
+    "content_checksum": "1e6df3eba0f7b3c1c68317e739ff87d628236a9693c4ba075214086814df3556",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "ftc-what-to-do-scammed",
+    "title": "What To Do if You Were Scammed",
+    "category": "fraud_response_and_recovery",
+    "description": "FTC consumer guidance for responding to scams involving payment apps, bank transfers, wires, cryptocurrency, phishing, and compromised account information.",
+    "behavioral_indicators": [
+      "phishing message requesting personal or account information",
+      "unauthorized or coerced payment",
+      "compromised username or password",
+      "remote-access or malware request"
+    ],
+    "investigative_considerations": [
+      "record the payment channel and contact the provider promptly",
+      "preserve messages, receipts, and account-access evidence",
+      "use official recovery and reporting channels"
+    ],
+    "source_organization": "Federal Trade Commission",
+    "source_url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "access-2026-10-12",
+    "content": "The FTC provides response steps for scams involving bank transfers, payment apps, wire services, cryptocurrency, phishing, and compromised account information. It recommends contacting the relevant provider promptly, preserving evidence, changing compromised credentials, and using official reporting or recovery services. These are response recommendations, not a finding that a transaction is fraudulent.",
+    "content_checksum": "07472ffec086c8a525ec70c89d040a003798458b2472883b99cc070deb25bf1d",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "ftc-business-impersonator-scams",
+    "title": "Business Impersonator Scams",
+    "category": "business_impersonation",
+    "description": "FTC consumer guidance on messages that imitate a familiar business and seek payment, personal information, or computer access.",
+    "behavioral_indicators": [
+      "unexpected call, email, text, or social message resembling a known business",
+      "link or phone number supplied by the message",
+      "request for payment, personal information, or computer access",
+      "gift-card, cryptocurrency, or wire-transfer demand"
+    ],
+    "investigative_considerations": [
+      "verify the business through independently obtained contact information",
+      "retain the message and supplied link or number",
+      "do not treat the appearance of a familiar brand as authentication"
+    ],
+    "source_organization": "Federal Trade Commission",
+    "source_url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "access-2026-10-12",
+    "content": "The FTC describes business-impersonator messages that appear to come from a familiar company but seek payment, personal information, or computer access. The guidance highlights unexpected contact, links or phone numbers supplied by the message, and hard-to-reverse payment demands. It recommends stopping and verifying the organization through trusted contact information.",
+    "content_checksum": "047ee8cc28879c5307a0b8fbbdaf37c9091b5add632d3dbf754b2ed47e10b2c1",
+    "knowledge_base_version": "module5_authoritative_v1"
+  },
+  {
+    "document_id": "cisa-phishing-guidance-phase-one",
+    "title": "Phishing Guidance: Stopping the Attack Cycle at Phase One",
+    "category": "phishing_credential_theft",
+    "description": "Joint CISA, NSA, FBI, and MS-ISAC guidance on phishing lures, malicious links or attachments, credential theft, and mitigations.",
+    "behavioral_indicators": [
+      "trusted-source impersonation",
+      "malicious hyperlink or attachment",
+      "spearphishing lure targeted to a user",
+      "SMS or collaboration-platform message containing a suspicious link"
+    ],
+    "investigative_considerations": [
+      "preserve the original message and link or attachment metadata",
+      "review authentication and endpoint telemetry",
+      "consider phishing-resistant authentication and other mitigations described by the guidance"
+    ],
+    "source_organization": "CISA, NSA, FBI, and MS-ISAC",
+    "source_url": "https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf",
+    "source_type": "authoritative",
+    "publication_or_access_date": "2026-10-12",
+    "document_version": "access-2026-10-12",
+    "content": "The joint guidance describes phishing as trusted-source impersonation that lures a user into a malicious link or attachment. It covers malware-based phishing, targeted spearphishing, and lures delivered through SMS and collaboration platforms, followed by mitigations for protecting credentials. The summary is cybersecurity guidance and is not evidence that a transaction or account was phished.",
+    "content_checksum": "4f173ff1eac84087e04ee38f0d69bb90c6bf5b3c47b21da07f66eaf6bbfcaca3",
+    "knowledge_base_version": "module5_authoritative_v1"
+  }
+]

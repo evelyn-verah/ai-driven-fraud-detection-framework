@@ -1,0 +1,46 @@
+{
+  "files": {
+    "src/dashboard/__init__.py": {
+      "original_v1_sha256": "d6870edb866c90a2cba870109f7c786b36db28b7e48518ca5fcbef805e9155c2",
+      "sha256": "d6870edb866c90a2cba870109f7c786b36db28b7e48518ca5fcbef805e9155c2",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/__init__.py"
+    },
+    "src/dashboard/app.py": {
+      "original_v1_sha256": "0818cf7b63dba59b54b86c493c9452e4a6dfb0930ebae73c4d6b13023d5ae647",
+      "sha256": "0818cf7b63dba59b54b86c493c9452e4a6dfb0930ebae73c4d6b13023d5ae647",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/app.py"
+    },
+    "src/dashboard/build_metadata_index.py": {
+      "original_v1_sha256": "bd34e5bf49e3e79305f41b72c4c1f9fc3a9cb4a8ec8cd265cac9c65712c4dd25",
+      "sha256": "bd34e5bf49e3e79305f41b72c4c1f9fc3a9cb4a8ec8cd265cac9c65712c4dd25",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/build_metadata_index.py"
+    },
+    "src/dashboard/config.py": {
+      "original_v1_sha256": "1edfa2fc94bb555ddcc4674792ec16e60ea5167c4022edac1081ca8ed702ea88",
+      "sha256": "1edfa2fc94bb555ddcc4674792ec16e60ea5167c4022edac1081ca8ed702ea88",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/config.py"
+    },
+    "src/dashboard/data_access.py": {
+      "original_v1_sha256": "1492d3a6701756e67e3e365d5fef8b1d0083c1e48c6fb78b26116f3d0bb97c12",
+      "sha256": "1492d3a6701756e67e3e365d5fef8b1d0083c1e48c6fb78b26116f3d0bb97c12",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/data_access.py"
+    },
+    "src/dashboard/details.py": {
+      "original_v1_sha256": "b507a8f7a48506918dbc33a44409445f1b65b31e703c70b9c6795808a08eba1c",
+      "sha256": "b507a8f7a48506918dbc33a44409445f1b65b31e703c70b9c6795808a08eba1c",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/details.py"
+    },
+    "src/dashboard/feedback_store.py": {
+      "original_v1_sha256": "872acc904c8f38da0f514410b6eacf271b50bc8335a46d2ea0e1b11fa1c667a5",
+      "sha256": "872acc904c8f38da0f514410b6eacf271b50bc8335a46d2ea0e1b11fa1c667a5",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/feedback_store.py"
+    },
+    "src/dashboard/metadata_index.py": {
+      "original_v1_sha256": "4ab9347a4c9080080729a9dad78ee5b717b82c0c51fb00c73bbfa85ddff385a0",
+      "sha256": "4ab9347a4c9080080729a9dad78ee5b717b82c0c51fb00c73bbfa85ddff385a0",
+      "snapshot_path": "artifacts/module6_v1_1/v1_source_snapshot/src/dashboard/metadata_index.py"
+    }
+  },
+  "schema_version": "module6_v1_source_snapshot_v1",
+  "source_manifest": "artifacts/module6_v1_freeze_manifest.json"
+}

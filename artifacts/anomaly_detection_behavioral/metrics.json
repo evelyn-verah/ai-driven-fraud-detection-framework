@@ -1,0 +1,111 @@
+{
+  "dataset": "PaySim simulated mobile-money transactions",
+  "method": "Matched Isolation Forest comparison",
+  "training_type": "unsupervised",
+  "input_file": "data/raw/PS_20174392719_1491204439457_log.csv",
+  "rows_loaded": 100000,
+  "split": "same 70% chronological boundary as original Module 3 baseline; no shared steps",
+  "train_rows": 72726,
+  "test_rows": 27274,
+  "train_fraud_count": 109,
+  "test_fraud_count": 7,
+  "train_step_max": 9,
+  "test_step_min": 10,
+  "alert_counts": [
+    10,
+    50,
+    100,
+    500
+  ],
+  "baseline": {
+    "average_precision": 0.0003656119811796143,
+    "roc_auc": 0.577372438688315,
+    "alerts": {
+      "10": {
+        "requested": 10,
+        "reviewed": 10,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "50": {
+        "requested": 50,
+        "reviewed": 50,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "100": {
+        "requested": 100,
+        "reviewed": 100,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "500": {
+        "requested": 500,
+        "reviewed": 500,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "features": [
+      "amount",
+      "oldbalanceOrg",
+      "oldbalanceDest",
+      "step"
+    ]
+  },
+  "behavioral": {
+    "average_precision": 0.0002802508365174972,
+    "roc_auc": 0.5105045869156333,
+    "alerts": {
+      "10": {
+        "requested": 10,
+        "reviewed": 10,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "50": {
+        "requested": 50,
+        "reviewed": 50,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "100": {
+        "requested": 100,
+        "reviewed": 100,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "500": {
+        "requested": 500,
+        "reviewed": 500,
+        "fraud_detected": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "features": [
+      "amount",
+      "oldbalanceOrg",
+      "oldbalanceDest",
+      "step",
+      "sender_txn_count_prior",
+      "sender_velocity_3_steps_prior",
+      "sender_avg_amount_prior",
+      "sender_amount_ratio_to_avg_prior",
+      "sender_same_type_count_prior",
+      "sender_same_type_share_prior",
+      "receiver_txn_count_prior",
+      "receiver_avg_amount_prior",
+      "receiver_amount_ratio_to_avg_prior"
+    ]
+  },
+  "behavioral_feature_policy": "All account and transaction-history aggregates use prior simulation steps only. Transactions within the same step do not update one another's features.",
+  "limitations": "PaySim is simulated. Anomaly scores do not establish that a transaction is fraudulent. This is an independent benchmark, not a production deployment."
+}

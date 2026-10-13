@@ -1,0 +1,14 @@
+[
+ {"case_id":"dev-ato-paraphrase","query":"support agent impersonation asks for login verification code before account access","expected_document_ids":["fbi-ato-financial-support-2025"]},
+ {"case_id":"dev-phish-paraphrase","query":"trusted brand lure sends malicious link to steal credentials","expected_document_ids":["cisa-phishing-guidance-phase-one","ftc-business-impersonator-scams"]},
+ {"case_id":"dev-social-paraphrase","query":"phone number takeover and forwarded calls expose banking account","expected_document_ids":["ic3-social-engineering-psa-2024"]},
+ {"case_id":"dev-mule-paraphrase","query":"new job asks worker to receive and send funds through personal account","expected_document_ids":["fbi-money-mule-awareness-2019"]},
+ {"case_id":"dev-bec-paraphrase","query":"supplier email compromise leads to unauthorized transfer instructions","expected_document_ids":["ic3-bec-psa-2024"]},
+ {"case_id":"dev-payment-paraphrase","query":"fake bank representative tells customer to move payment app money","expected_document_ids":["ftc-payment-apps-2023"]},
+ {"case_id":"dev-transfer-paraphrase","query":"suspicious incoming and outgoing funds move between counterparties in sequence","expected_document_ids":["fbi-money-mule-awareness-2019","fincen-imposter-mule-advisory-2020"]},
+ {"case_id":"dev-ambiguous","query":"account receives an unexpected transfer and later sends money onward","expected_document_ids":["fbi-money-mule-awareness-2019","fincen-imposter-mule-advisory-2020"]},
+ {"case_id":"dev-multi","query":"impersonation message requests credentials and then rapid funds transfer","expected_document_ids":["fbi-ato-financial-support-2025","ftc-business-impersonator-scams","ic3-social-engineering-psa-2024"]},
+ {"case_id":"dev-unrelated-music","query":"classical music orchestral composition analysis","expected_document_ids":[]},
+ {"case_id":"dev-unrelated-garden","query":"botanical garden weekend weather forecast","expected_document_ids":[]},
+ {"case_id":"dev-unrelated-space","query":"quantum spacecraft propulsion experiment","expected_document_ids":[]}
+]

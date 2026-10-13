@@ -1,0 +1,3432 @@
+{
+  "execution_timestamp_utc": "2026-10-13T17:41:20.643879+00:00",
+  "limitations": [
+    "Descriptive summaries over simulated PaySim transactions; no real-world performance inference.",
+    "Anomaly intensities are contextual indicators and do not alter Random Forest alert decisions.",
+    "Ground-truth labels, account identifiers, and reviewer-entered content are excluded from monitoring outputs."
+  ],
+  "retrospective_simulated_data": true,
+  "schema_version": "module7_stage2_monitoring_v1",
+  "source_artifacts": {
+    "architecture_version": "module4_stage4_rf_primary_v1",
+    "complete_step_counts": {
+      "378": 37127,
+      "379": 41759,
+      "380": 37693,
+      "381": 14961,
+      "382": 11829,
+      "383": 7818,
+      "384": 3588,
+      "385": 1419,
+      "386": 633,
+      "387": 28,
+      "388": 18,
+      "389": 10,
+      "390": 12,
+      "391": 12,
+      "392": 10,
+      "393": 19269,
+      "394": 28959,
+      "395": 22797,
+      "396": 34075,
+      "397": 30348,
+      "398": 26656,
+      "399": 30223,
+      "400": 30910,
+      "401": 33468,
+      "402": 40218,
+      "403": 45155,
+      "404": 36726,
+      "405": 16604,
+      "406": 12023,
+      "407": 7937,
+      "408": 8256,
+      "409": 483,
+      "410": 20,
+      "411": 16,
+      "412": 8,
+      "413": 289,
+      "414": 16,
+      "415": 16,
+      "416": 2182,
+      "417": 6,
+      "418": 6,
+      "419": 1257,
+      "420": 2620,
+      "421": 14,
+      "422": 1259,
+      "423": 766,
+      "424": 14,
+      "425": 28,
+      "426": 5139,
+      "427": 14,
+      "428": 2792,
+      "429": 2357,
+      "430": 8,
+      "431": 1685,
+      "432": 4,
+      "433": 6,
+      "434": 8,
+      "435": 4,
+      "436": 248,
+      "437": 16,
+      "438": 12,
+      "439": 883,
+      "440": 18,
+      "441": 10,
+      "442": 1222,
+      "443": 10,
+      "444": 20,
+      "445": 64,
+      "446": 12,
+      "447": 10,
+      "448": 2548,
+      "449": 1194,
+      "450": 16,
+      "451": 3751,
+      "452": 308,
+      "453": 59,
+      "454": 39,
+      "455": 824,
+      "456": 18,
+      "457": 10,
+      "458": 438,
+      "459": 8,
+      "460": 59,
+      "461": 83,
+      "462": 16,
+      "463": 10,
+      "464": 16,
+      "465": 12,
+      "466": 984,
+      "467": 12,
+      "468": 12,
+      "469": 6016,
+      "470": 12,
+      "471": 2620,
+      "472": 84,
+      "473": 10,
+      "474": 2728,
+      "475": 14,
+      "476": 3755,
+      "477": 10,
+      "478": 1908,
+      "479": 904,
+      "480": 6,
+      "481": 14,
+      "482": 16,
+      "483": 317,
+      "484": 6,
+      "485": 12,
+      "486": 8,
+      "487": 912,
+      "488": 8,
+      "489": 14,
+      "490": 3820,
+      "491": 12,
+      "492": 5119,
+      "493": 1819,
+      "494": 8,
+      "495": 3256,
+      "496": 873,
+      "497": 20,
+      "498": 12,
+      "499": 10,
+      "500": 6108,
+      "501": 28,
+      "502": 313,
+      "503": 1878,
+      "504": 10,
+      "505": 936,
+      "506": 8,
+      "507": 14,
+      "508": 6,
+      "509": 288,
+      "510": 10,
+      "511": 6,
+      "512": 12,
+      "513": 10,
+      "514": 8733,
+      "515": 6,
+      "516": 14,
+      "517": 1391,
+      "518": 3488,
+      "519": 12,
+      "520": 3037,
+      "521": 14,
+      "522": 18631,
+      "523": 30,
+      "524": 2664,
+      "525": 8023,
+      "526": 2470,
+      "527": 2697,
+      "528": 937,
+      "529": 33,
+      "530": 409,
+      "531": 250,
+      "532": 95,
+      "533": 12,
+      "534": 531,
+      "535": 6,
+      "536": 12,
+      "537": 18,
+      "538": 3120,
+      "539": 4,
+      "540": 5476,
+      "541": 12,
+      "542": 4475,
+      "543": 6,
+      "544": 9358,
+      "545": 3562,
+      "546": 7771,
+      "547": 2261,
+      "548": 5689,
+      "549": 642,
+      "550": 4804,
+      "551": 949,
+      "552": 1517,
+      "553": 8,
+      "554": 18,
+      "555": 144,
+      "556": 6,
+      "557": 20,
+      "558": 14,
+      "559": 10,
+      "560": 10,
+      "561": 16,
+      "562": 10,
+      "563": 3284,
+      "564": 3546,
+      "565": 5425,
+      "566": 1421,
+      "567": 4356,
+      "568": 14,
+      "569": 1182,
+      "570": 1965,
+      "571": 4256,
+      "572": 18,
+      "573": 3487,
+      "574": 2614,
+      "575": 8,
+      "576": 877,
+      "577": 364,
+      "578": 269,
+      "579": 12,
+      "580": 58,
+      "581": 10,
+      "582": 775,
+      "583": 16,
+      "584": 281,
+      "585": 2047,
+      "586": 1581,
+      "587": 2740,
+      "588": 4894,
+      "589": 6245,
+      "590": 6584,
+      "591": 57,
+      "592": 5373,
+      "593": 4,
+      "594": 6536,
+      "595": 5434,
+      "596": 9319,
+      "597": 2486,
+      "598": 934,
+      "599": 1816,
+      "600": 18,
+      "601": 865,
+      "602": 8,
+      "603": 12,
+      "604": 8,
+      "605": 16,
+      "606": 14,
+      "607": 8,
+      "608": 1082,
+      "609": 8,
+      "610": 1199,
+      "611": 14,
+      "612": 2677,
+      "613": 45,
+      "614": 1278,
+      "615": 8,
+      "616": 6,
+      "617": 2680,
+      "618": 8,
+      "619": 2800,
+      "620": 8,
+      "621": 1121,
+      "622": 4,
+      "623": 6,
+      "624": 10,
+      "625": 24,
+      "626": 6,
+      "627": 4,
+      "628": 6,
+      "629": 20,
+      "630": 150,
+      "631": 12,
+      "632": 8,
+      "633": 8,
+      "634": 10,
+      "635": 16,
+      "636": 12,
+      "637": 3390,
+      "638": 14,
+      "639": 14,
+      "640": 1398,
+      "641": 10,
+      "642": 1141,
+      "643": 14,
+      "644": 2267,
+      "645": 10,
+      "646": 20,
+      "647": 10,
+      "648": 14,
+      "649": 263,
+      "650": 16,
+      "651": 10,
+      "652": 14,
+      "653": 8,
+      "654": 8,
+      "655": 4,
+      "656": 1965,
+      "657": 10,
+      "658": 14,
+      "659": 2500,
+      "660": 12,
+      "661": 4877,
+      "662": 2,
+      "663": 10,
+      "664": 1125,
+      "665": 10,
+      "666": 6,
+      "667": 1400,
+      "668": 8,
+      "669": 322,
+      "670": 1906,
+      "671": 18,
+      "672": 153,
+      "673": 445,
+      "674": 14,
+      "675": 30,
+      "676": 8,
+      "677": 8,
+      "678": 6,
+      "679": 72,
+      "680": 22,
+      "681": 4703,
+      "682": 6,
+      "683": 2192,
+      "684": 4562,
+      "685": 14,
+      "686": 4689,
+      "687": 8040,
+      "688": 7885,
+      "689": 14,
+      "690": 4972,
+      "691": 4809,
+      "692": 6898,
+      "693": 4,
+      "694": 2664,
+      "695": 2827,
+      "696": 6,
+      "697": 12,
+      "698": 65,
+      "699": 55,
+      "700": 6,
+      "701": 18,
+      "702": 14,
+      "703": 8,
+      "704": 16,
+      "705": 2362,
+      "706": 4,
+      "707": 309,
+      "708": 4,
+      "709": 2313,
+      "710": 1788,
+      "711": 8,
+      "712": 23,
+      "713": 8,
+      "714": 681,
+      "715": 1879,
+      "716": 140,
+      "717": 632,
+      "718": 918,
+      "719": 14,
+      "720": 10,
+      "721": 4,
+      "722": 10,
+      "723": 14,
+      "724": 14,
+      "725": 4,
+      "726": 22,
+      "727": 12,
+      "728": 10,
+      "729": 4,
+      "730": 28,
+      "731": 16,
+      "732": 10,
+      "733": 10,
+      "734": 8,
+      "735": 12,
+      "736": 14,
+      "737": 10,
+      "738": 10,
+      "739": 10,
+      "740": 6,
+      "741": 22,
+      "742": 14,
+      "743": 8
+    },
+    "frozen_threshold": 0.3494391872980995,
+    "metadata_sidecar_manifest_sha256": "9f39fd98b84f454d1da781740edc5c0867a0656cb0288b4fdb507a757a3f2492",
+    "metadata_sidecar_parquet_sha256": "a3062d6d10af8785c474bc9c7b148239e0b3c2355dbe0102734492a978055cc5",
+    "metadata_sidecar_path": "C:\\Users\\W7Z7DBJ\\Downloads\\fraud-detection-framework-v2-module1\\fraud-detection-framework-v2\\artifacts\\dashboard_metadata_index_v1",
+    "module4_manifest_path": "C:\\Users\\W7Z7DBJ\\Downloads\\fraud-detection-framework-v2-module1\\fraud-detection-framework-v2\\artifacts\\module4_final_holdout_recovery_v1\\recovery_manifest.json",
+    "module4_manifest_sha256": "a03ed580339f46c136739896acfc197e564855c1744ad0beb274a874fd472c15",
+    "score_cache_path": "C:\\Users\\W7Z7DBJ\\Downloads\\fraud-detection-framework-v2-module1\\fraud-detection-framework-v2\\artifacts\\module4_final_holdout_recovery_v1\\complete_holdout_scores.csv",
+    "score_cache_sha256": "16ab136cab8313db935fb30a6f182ddd15db7de28c9d76bdfa089345a35f9410",
+    "step_range": [
+      378,
+      743
+    ]
+  },
+  "summary": {
+    "alert_count": 2457,
+    "alert_rate": 0.0025707720895972144,
+    "amount": {
+      "count": 955744,
+      "max": 15415938.31,
+      "mean": 168079.89288030058,
+      "median": 71421.315,
+      "min": 0.0,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "quantiles": {
+        "p05": 2214.6495000000004,
+        "p25": 13612.4475,
+        "p50": 71421.315,
+        "p75": 202060.0575,
+        "p95": 506100.039
+      }
+    },
+    "anomaly": {
+      "baseline_anomaly_intensity": {
+        "bins": [
+          {
+            "bin": "0.0-0.1",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.1-0.2",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.2-0.3",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.3-0.4",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.4-0.5",
+            "count": 735574,
+            "proportion": 0.7696349650115513
+          },
+          {
+            "bin": "0.5-0.6",
+            "count": 145038,
+            "proportion": 0.1517540261827435
+          },
+          {
+            "bin": "0.6-0.7",
+            "count": 64668,
+            "proportion": 0.06766247028492986
+          },
+          {
+            "bin": "0.7-0.8",
+            "count": 10457,
+            "proportion": 0.010941214383768038
+          },
+          {
+            "bin": "0.8-0.9",
+            "count": 7,
+            "proportion": 7.324137007399471e-06
+          },
+          {
+            "bin": "0.9-1.0",
+            "count": 0,
+            "proportion": 0.0
+          }
+        ],
+        "count": 955744,
+        "interpretation": "contextual anomaly intensity, not a fraud probability",
+        "max": 0.8135411041233598,
+        "mean": 0.46872186044029496,
+        "median": 0.4362565362303333,
+        "min": 0.4077746068477597,
+        "missing_count": 0,
+        "missing_rate": 0.0,
+        "quantiles": {
+          "p05": 0.4094848008854584,
+          "p25": 0.4172903955307319,
+          "p50": 0.4362565362303333,
+          "p75": 0.4913747287263805,
+          "p95": 0.6334406783774796
+        }
+      },
+      "behavioral_anomaly_intensity": {
+        "bins": [
+          {
+            "bin": "0.0-0.1",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.1-0.2",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.2-0.3",
+            "count": 0,
+            "proportion": 0.0
+          },
+          {
+            "bin": "0.3-0.4",
+            "count": 339939,
+            "proportion": 0.355679972879767
+          },
+          {
+            "bin": "0.4-0.5",
+            "count": 412097,
+            "proportion": 0.4311792697626143
+          },
+          {
+            "bin": "0.5-0.6",
+            "count": 147623,
+            "proportion": 0.15445872534904745
+          },
+          {
+            "bin": "0.6-0.7",
+            "count": 47846,
+            "proportion": 0.050061522750862154
+          },
+          {
+            "bin": "0.7-0.8",
+            "count": 8238,
+            "proportion": 0.008619462952422406
+          },
+          {
+            "bin": "0.8-0.9",
+            "count": 1,
+            "proportion": 1.046305286771353e-06
+          },
+          {
+            "bin": "0.9-1.0",
+            "count": 0,
+            "proportion": 0.0
+          }
+        ],
+        "count": 955744,
+        "interpretation": "contextual anomaly intensity, not a fraud probability",
+        "max": 0.8004374424783214,
+        "mean": 0.45393565517005263,
+        "median": 0.4386352064886053,
+        "min": 0.3849815035287259,
+        "missing_count": 0,
+        "missing_rate": 0.0,
+        "quantiles": {
+          "p05": 0.3853410329137595,
+          "p25": 0.3897575093746414,
+          "p50": 0.4386352064886053,
+          "p75": 0.4869706846746024,
+          "p95": 0.6105341005875025
+        }
+      }
+    },
+    "by_step": [
+      {
+        "alert_count": 5,
+        "alert_rate": 0.00013467287957551107,
+        "step": 378,
+        "transaction_count": 37127
+      },
+      {
+        "alert_count": 26,
+        "alert_rate": 0.0006226202734739817,
+        "step": 379,
+        "transaction_count": 41759
+      },
+      {
+        "alert_count": 18,
+        "alert_rate": 0.00047754224922399384,
+        "step": 380,
+        "transaction_count": 37693
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.00033420225920727226,
+        "step": 381,
+        "transaction_count": 14961
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.000591765998816468,
+        "step": 382,
+        "transaction_count": 11829
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.0014070094653364032,
+        "step": 383,
+        "transaction_count": 7818
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0008361204013377926,
+        "step": 384,
+        "transaction_count": 3588
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0014094432699083862,
+        "step": 385,
+        "transaction_count": 1419
+      },
+      {
+        "alert_count": 15,
+        "alert_rate": 0.023696682464454975,
+        "step": 386,
+        "transaction_count": 633
+      },
+      {
+        "alert_count": 20,
+        "alert_rate": 0.7142857142857143,
+        "step": 387,
+        "transaction_count": 28
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.6111111111111112,
+        "step": 388,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.8,
+        "step": 389,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.6666666666666666,
+        "step": 390,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.4166666666666667,
+        "step": 391,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.3,
+        "step": 392,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.00025948414551870883,
+        "step": 393,
+        "transaction_count": 19269
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.00020718947477468144,
+        "step": 394,
+        "transaction_count": 28959
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.00039478878799842083,
+        "step": 395,
+        "transaction_count": 22797
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.00023477622890682317,
+        "step": 396,
+        "transaction_count": 34075
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.0002965599051008304,
+        "step": 397,
+        "transaction_count": 30348
+      },
+      {
+        "alert_count": 23,
+        "alert_rate": 0.0008628451380552221,
+        "step": 398,
+        "transaction_count": 26656
+      },
+      {
+        "alert_count": 12,
+        "alert_rate": 0.00039704860536677363,
+        "step": 399,
+        "transaction_count": 30223
+      },
+      {
+        "alert_count": 17,
+        "alert_rate": 0.0005499838240051764,
+        "step": 400,
+        "transaction_count": 30910
+      },
+      {
+        "alert_count": 20,
+        "alert_rate": 0.0005975857535556352,
+        "step": 401,
+        "transaction_count": 33468
+      },
+      {
+        "alert_count": 17,
+        "alert_rate": 0.00042269630513700336,
+        "step": 402,
+        "transaction_count": 40218
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.000243605359317905,
+        "step": 403,
+        "transaction_count": 45155
+      },
+      {
+        "alert_count": 23,
+        "alert_rate": 0.0006262593258182215,
+        "step": 404,
+        "transaction_count": 36726
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.0006022645145748012,
+        "step": 405,
+        "transaction_count": 16604
+      },
+      {
+        "alert_count": 15,
+        "alert_rate": 0.0012476087498960325,
+        "step": 406,
+        "transaction_count": 12023
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0006299609424215699,
+        "step": 407,
+        "transaction_count": 7937
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0008478682170542636,
+        "step": 408,
+        "transaction_count": 8256
+      },
+      {
+        "alert_count": 17,
+        "alert_rate": 0.035196687370600416,
+        "step": 409,
+        "transaction_count": 483
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.65,
+        "step": 410,
+        "transaction_count": 20
+      },
+      {
+        "alert_count": 12,
+        "alert_rate": 0.75,
+        "step": 411,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.5,
+        "step": 412,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.031141868512110725,
+        "step": 413,
+        "transaction_count": 289
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.375,
+        "step": 414,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.375,
+        "step": 415,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0032080659945004585,
+        "step": 416,
+        "transaction_count": 2182
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.6666666666666666,
+        "step": 417,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.6666666666666666,
+        "step": 418,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0031821797931583136,
+        "step": 419,
+        "transaction_count": 1257
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0019083969465648854,
+        "step": 420,
+        "transaction_count": 2620
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 421,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.004765687053216839,
+        "step": 422,
+        "transaction_count": 1259
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0039164490861618795,
+        "step": 423,
+        "transaction_count": 766
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 424,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 17,
+        "alert_rate": 0.6071428571428571,
+        "step": 425,
+        "transaction_count": 28
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0003891807744697412,
+        "step": 426,
+        "transaction_count": 5139
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5714285714285714,
+        "step": 427,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0010744985673352436,
+        "step": 428,
+        "transaction_count": 2792
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0016970725498515061,
+        "step": 429,
+        "transaction_count": 2357
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.625,
+        "step": 430,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.002373887240356083,
+        "step": 431,
+        "transaction_count": 1685
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 1.0,
+        "step": 432,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.5,
+        "step": 433,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.875,
+        "step": 434,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.75,
+        "step": 435,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.03225806451612903,
+        "step": 436,
+        "transaction_count": 248
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5,
+        "step": 437,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.4166666666666667,
+        "step": 438,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.006795016987542469,
+        "step": 439,
+        "transaction_count": 883
+      },
+      {
+        "alert_count": 18,
+        "alert_rate": 1.0,
+        "step": 440,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.7,
+        "step": 441,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.006546644844517185,
+        "step": 442,
+        "transaction_count": 1222
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.8,
+        "step": 443,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.65,
+        "step": 444,
+        "transaction_count": 20
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0625,
+        "step": 445,
+        "transaction_count": 64
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.4166666666666667,
+        "step": 446,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.7,
+        "step": 447,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0011773940345368916,
+        "step": 448,
+        "transaction_count": 2548
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0041876046901172526,
+        "step": 449,
+        "transaction_count": 1194
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.6875,
+        "step": 450,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0007997867235403892,
+        "step": 451,
+        "transaction_count": 3751
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.012987012987012988,
+        "step": 452,
+        "transaction_count": 308
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0847457627118644,
+        "step": 453,
+        "transaction_count": 59
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.07692307692307693,
+        "step": 454,
+        "transaction_count": 39
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.006067961165048544,
+        "step": 455,
+        "transaction_count": 824
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.5555555555555556,
+        "step": 456,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 457,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0045662100456621,
+        "step": 458,
+        "transaction_count": 438
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 459,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.15254237288135594,
+        "step": 460,
+        "transaction_count": 59
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.13253012048192772,
+        "step": 461,
+        "transaction_count": 83
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5,
+        "step": 462,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 463,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.8125,
+        "step": 464,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5833333333333334,
+        "step": 465,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.003048780487804878,
+        "step": 466,
+        "transaction_count": 984
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.4166666666666667,
+        "step": 467,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5833333333333334,
+        "step": 468,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0009973404255319148,
+        "step": 469,
+        "transaction_count": 6016
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.8333333333333334,
+        "step": 470,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 0,
+        "alert_rate": 0.0,
+        "step": 471,
+        "transaction_count": 2620
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.03571428571428571,
+        "step": 472,
+        "transaction_count": 84
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.3,
+        "step": 473,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0021994134897360706,
+        "step": 474,
+        "transaction_count": 2728
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5714285714285714,
+        "step": 475,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0015978695073235686,
+        "step": 476,
+        "transaction_count": 3755
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.9,
+        "step": 477,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0020964360587002098,
+        "step": 478,
+        "transaction_count": 1908
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.004424778761061947,
+        "step": 479,
+        "transaction_count": 904
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.16666666666666666,
+        "step": 480,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.42857142857142855,
+        "step": 481,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.4375,
+        "step": 482,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.012618296529968454,
+        "step": 483,
+        "transaction_count": 317
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.16666666666666666,
+        "step": 484,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5833333333333334,
+        "step": 485,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.625,
+        "step": 486,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.009868421052631578,
+        "step": 487,
+        "transaction_count": 912
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.5,
+        "step": 488,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 489,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.0028795811518324606,
+        "step": 490,
+        "transaction_count": 3820
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5833333333333334,
+        "step": 491,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.001172103926548154,
+        "step": 492,
+        "transaction_count": 5119
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0016492578339747114,
+        "step": 493,
+        "transaction_count": 1819
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.625,
+        "step": 494,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.002457002457002457,
+        "step": 495,
+        "transaction_count": 3256
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.002290950744558992,
+        "step": 496,
+        "transaction_count": 873
+      },
+      {
+        "alert_count": 16,
+        "alert_rate": 0.8,
+        "step": 497,
+        "transaction_count": 20
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.6666666666666666,
+        "step": 498,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.3,
+        "step": 499,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0006548788474132286,
+        "step": 500,
+        "transaction_count": 6108
+      },
+      {
+        "alert_count": 19,
+        "alert_rate": 0.6785714285714286,
+        "step": 501,
+        "transaction_count": 28
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.01597444089456869,
+        "step": 502,
+        "transaction_count": 313
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.004259850905218318,
+        "step": 503,
+        "transaction_count": 1878
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 504,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.007478632478632479,
+        "step": 505,
+        "transaction_count": 936
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.75,
+        "step": 506,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5714285714285714,
+        "step": 507,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 508,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.024305555555555556,
+        "step": 509,
+        "transaction_count": 288
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 510,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.6666666666666666,
+        "step": 511,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.5,
+        "step": 512,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 513,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0009160654986831558,
+        "step": 514,
+        "transaction_count": 8733
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.16666666666666666,
+        "step": 515,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.7857142857142857,
+        "step": 516,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0014378145219266715,
+        "step": 517,
+        "transaction_count": 1391
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0011467889908256881,
+        "step": 518,
+        "transaction_count": 3488
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.6666666666666666,
+        "step": 519,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0026341784655910436,
+        "step": 520,
+        "transaction_count": 3037
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.42857142857142855,
+        "step": 521,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.00048306585797863776,
+        "step": 522,
+        "transaction_count": 18631
+      },
+      {
+        "alert_count": 20,
+        "alert_rate": 0.6666666666666666,
+        "step": 523,
+        "transaction_count": 30
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0007507507507507507,
+        "step": 524,
+        "transaction_count": 2664
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0003739249657235448,
+        "step": 525,
+        "transaction_count": 8023
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0008097165991902834,
+        "step": 526,
+        "transaction_count": 2470
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0014831294030404152,
+        "step": 527,
+        "transaction_count": 2697
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.005336179295624333,
+        "step": 528,
+        "transaction_count": 937
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.18181818181818182,
+        "step": 529,
+        "transaction_count": 33
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.009779951100244499,
+        "step": 530,
+        "transaction_count": 409
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.04,
+        "step": 531,
+        "transaction_count": 250
+      },
+      {
+        "alert_count": 0,
+        "alert_rate": 0.0,
+        "step": 532,
+        "transaction_count": 95
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.75,
+        "step": 533,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.011299435028248588,
+        "step": 534,
+        "transaction_count": 531
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 535,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.4166666666666667,
+        "step": 536,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.3888888888888889,
+        "step": 537,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0022435897435897434,
+        "step": 538,
+        "transaction_count": 3120
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.25,
+        "step": 539,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0009130752373995618,
+        "step": 540,
+        "transaction_count": 5476
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.8333333333333334,
+        "step": 541,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.001787709497206704,
+        "step": 542,
+        "transaction_count": 4475
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.5,
+        "step": 543,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0003205813207950417,
+        "step": 544,
+        "transaction_count": 9358
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.00028074115665356543,
+        "step": 545,
+        "transaction_count": 3562
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.0011581521039763223,
+        "step": 546,
+        "transaction_count": 7771
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0017691287041132243,
+        "step": 547,
+        "transaction_count": 2261
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0003515556336790297,
+        "step": 548,
+        "transaction_count": 5689
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.010903426791277258,
+        "step": 549,
+        "transaction_count": 642
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0010407993338884263,
+        "step": 550,
+        "transaction_count": 4804
+      },
+      {
+        "alert_count": 14,
+        "alert_rate": 0.014752370916754479,
+        "step": 551,
+        "transaction_count": 949
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0013183915622940012,
+        "step": 552,
+        "transaction_count": 1517
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 553,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 14,
+        "alert_rate": 0.7777777777777778,
+        "step": 554,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.027777777777777776,
+        "step": 555,
+        "transaction_count": 144
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 556,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 12,
+        "alert_rate": 0.6,
+        "step": 557,
+        "transaction_count": 20
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.42857142857142855,
+        "step": 558,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 559,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 560,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.625,
+        "step": 561,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.7,
+        "step": 562,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.0030450669914738123,
+        "step": 563,
+        "transaction_count": 3284
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.003102086858432036,
+        "step": 564,
+        "transaction_count": 3546
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.0023963133640552995,
+        "step": 565,
+        "transaction_count": 5425
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.003518648838845883,
+        "step": 566,
+        "transaction_count": 1421
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0018365472910927456,
+        "step": 567,
+        "transaction_count": 4356
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5714285714285714,
+        "step": 568,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.004230118443316413,
+        "step": 569,
+        "transaction_count": 1182
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.004071246819338422,
+        "step": 570,
+        "transaction_count": 1965
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0018796992481203006,
+        "step": 571,
+        "transaction_count": 4256
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.5555555555555556,
+        "step": 572,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0014338973329509608,
+        "step": 573,
+        "transaction_count": 3487
+      },
+      {
+        "alert_count": 0,
+        "alert_rate": 0.0,
+        "step": 574,
+        "transaction_count": 2614
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.5,
+        "step": 575,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.011402508551881414,
+        "step": 576,
+        "transaction_count": 877
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.016483516483516484,
+        "step": 577,
+        "transaction_count": 364
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.02973977695167286,
+        "step": 578,
+        "transaction_count": 269
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.75,
+        "step": 579,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.08620689655172414,
+        "step": 580,
+        "transaction_count": 58
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.7,
+        "step": 581,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 12,
+        "alert_rate": 0.015483870967741935,
+        "step": 582,
+        "transaction_count": 775
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.625,
+        "step": 583,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.014234875444839857,
+        "step": 584,
+        "transaction_count": 281
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0039081582804103565,
+        "step": 585,
+        "transaction_count": 2047
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.006325110689437065,
+        "step": 586,
+        "transaction_count": 1581
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.00145985401459854,
+        "step": 587,
+        "transaction_count": 2740
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0014303228442991418,
+        "step": 588,
+        "transaction_count": 4894
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0003202562049639712,
+        "step": 589,
+        "transaction_count": 6245
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0007594167679222357,
+        "step": 590,
+        "transaction_count": 6584
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.12280701754385964,
+        "step": 591,
+        "transaction_count": 57
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.0016750418760469012,
+        "step": 592,
+        "transaction_count": 5373
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.25,
+        "step": 593,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0007649938800489596,
+        "step": 594,
+        "transaction_count": 6536
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0012881854987118145,
+        "step": 595,
+        "transaction_count": 5434
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.00042923060414207535,
+        "step": 596,
+        "transaction_count": 9319
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0012067578439259854,
+        "step": 597,
+        "transaction_count": 2486
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.004282655246252677,
+        "step": 598,
+        "transaction_count": 934
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0011013215859030838,
+        "step": 599,
+        "transaction_count": 1816
+      },
+      {
+        "alert_count": 12,
+        "alert_rate": 0.6666666666666666,
+        "step": 600,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.008092485549132947,
+        "step": 601,
+        "transaction_count": 865
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 602,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.75,
+        "step": 603,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.25,
+        "step": 604,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.3125,
+        "step": 605,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 606,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.125,
+        "step": 607,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.010166358595194085,
+        "step": 608,
+        "transaction_count": 1082
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.25,
+        "step": 609,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0025020850708924102,
+        "step": 610,
+        "transaction_count": 1199
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.35714285714285715,
+        "step": 611,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0022413149047441168,
+        "step": 612,
+        "transaction_count": 2677
+      },
+      {
+        "alert_count": 14,
+        "alert_rate": 0.3111111111111111,
+        "step": 613,
+        "transaction_count": 45
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.008607198748043818,
+        "step": 614,
+        "transaction_count": 1278
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.5,
+        "step": 615,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.8333333333333334,
+        "step": 616,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.004850746268656716,
+        "step": 617,
+        "transaction_count": 2680
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.625,
+        "step": 618,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.0032142857142857142,
+        "step": 619,
+        "transaction_count": 2800
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.25,
+        "step": 620,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 15,
+        "alert_rate": 0.013380909901873328,
+        "step": 621,
+        "transaction_count": 1121
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.25,
+        "step": 622,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 0,
+        "alert_rate": 0.0,
+        "step": 623,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 624,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 16,
+        "alert_rate": 0.6666666666666666,
+        "step": 625,
+        "transaction_count": 24
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.5,
+        "step": 626,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 1.0,
+        "step": 627,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 628,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.65,
+        "step": 629,
+        "transaction_count": 20
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.006666666666666667,
+        "step": 630,
+        "transaction_count": 150
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.75,
+        "step": 631,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 632,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.625,
+        "step": 633,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.4,
+        "step": 634,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.375,
+        "step": 635,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.3333333333333333,
+        "step": 636,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0017699115044247787,
+        "step": 637,
+        "transaction_count": 3390
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 638,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.07142857142857142,
+        "step": 639,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.004291845493562232,
+        "step": 640,
+        "transaction_count": 1398
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.7,
+        "step": 641,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0035056967572304996,
+        "step": 642,
+        "transaction_count": 1141
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 643,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.0013233348037053375,
+        "step": 644,
+        "transaction_count": 2267
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 645,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 15,
+        "alert_rate": 0.75,
+        "step": 646,
+        "transaction_count": 20
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 647,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.7142857142857143,
+        "step": 648,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.015209125475285171,
+        "step": 649,
+        "transaction_count": 263
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.5,
+        "step": 650,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 651,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5,
+        "step": 652,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 653,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 654,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 0,
+        "alert_rate": 0.0,
+        "step": 655,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0035623409669211198,
+        "step": 656,
+        "transaction_count": 1965
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 657,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.42857142857142855,
+        "step": 658,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0028,
+        "step": 659,
+        "transaction_count": 2500
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.08333333333333333,
+        "step": 660,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0016403526758253025,
+        "step": 661,
+        "transaction_count": 4877
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 1.0,
+        "step": 662,
+        "transaction_count": 2
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.4,
+        "step": 663,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0071111111111111115,
+        "step": 664,
+        "transaction_count": 1125
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 665,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 666,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.002142857142857143,
+        "step": 667,
+        "transaction_count": 1400
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.75,
+        "step": 668,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.015527950310559006,
+        "step": 669,
+        "transaction_count": 322
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.006820566631689402,
+        "step": 670,
+        "transaction_count": 1906
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.5555555555555556,
+        "step": 671,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.026143790849673203,
+        "step": 672,
+        "transaction_count": 153
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.015730337078651686,
+        "step": 673,
+        "transaction_count": 445
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 674,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.3,
+        "step": 675,
+        "transaction_count": 30
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.75,
+        "step": 676,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 1.0,
+        "step": 677,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.6666666666666666,
+        "step": 678,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.041666666666666664,
+        "step": 679,
+        "transaction_count": 72
+      },
+      {
+        "alert_count": 14,
+        "alert_rate": 0.6363636363636364,
+        "step": 680,
+        "transaction_count": 22
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0012757814161173718,
+        "step": 681,
+        "transaction_count": 4703
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 682,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.0031934306569343066,
+        "step": 683,
+        "transaction_count": 2192
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0008768084173608067,
+        "step": 684,
+        "transaction_count": 4562
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.6428571428571429,
+        "step": 685,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.0027724461505651524,
+        "step": 686,
+        "transaction_count": 4689
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.0004975124378109452,
+        "step": 687,
+        "transaction_count": 8040
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0007609384908053266,
+        "step": 688,
+        "transaction_count": 7885
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.42857142857142855,
+        "step": 689,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.0016090104585679806,
+        "step": 690,
+        "transaction_count": 4972
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0012476606363069245,
+        "step": 691,
+        "transaction_count": 4809
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.0018846042331110468,
+        "step": 692,
+        "transaction_count": 6898
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.75,
+        "step": 693,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.004129129129129129,
+        "step": 694,
+        "transaction_count": 2664
+      },
+      {
+        "alert_count": 8,
+        "alert_rate": 0.002829854969932791,
+        "step": 695,
+        "transaction_count": 2827
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.6666666666666666,
+        "step": 696,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.5,
+        "step": 697,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 14,
+        "alert_rate": 0.2153846153846154,
+        "step": 698,
+        "transaction_count": 65
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.09090909090909091,
+        "step": 699,
+        "transaction_count": 55
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.3333333333333333,
+        "step": 700,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.3888888888888889,
+        "step": 701,
+        "transaction_count": 18
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5,
+        "step": 702,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.375,
+        "step": 703,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.6875,
+        "step": 704,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.0021168501270110076,
+        "step": 705,
+        "transaction_count": 2362
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.5,
+        "step": 706,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.016181229773462782,
+        "step": 707,
+        "transaction_count": 309
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 1.0,
+        "step": 708,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 2,
+        "alert_rate": 0.0008646779074794639,
+        "step": 709,
+        "transaction_count": 2313
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.006152125279642058,
+        "step": 710,
+        "transaction_count": 1788
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.75,
+        "step": 711,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.21739130434782608,
+        "step": 712,
+        "transaction_count": 23
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.875,
+        "step": 713,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.010279001468428781,
+        "step": 714,
+        "transaction_count": 681
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.0031931878658861094,
+        "step": 715,
+        "transaction_count": 1879
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.05,
+        "step": 716,
+        "transaction_count": 140
+      },
+      {
+        "alert_count": 9,
+        "alert_rate": 0.014240506329113924,
+        "step": 717,
+        "transaction_count": 632
+      },
+      {
+        "alert_count": 11,
+        "alert_rate": 0.011982570806100218,
+        "step": 718,
+        "transaction_count": 918
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.5,
+        "step": 719,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 1,
+        "alert_rate": 0.1,
+        "step": 720,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 0,
+        "alert_rate": 0.0,
+        "step": 721,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 722,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 10,
+        "alert_rate": 0.7142857142857143,
+        "step": 723,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.2857142857142857,
+        "step": 724,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.75,
+        "step": 725,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 12,
+        "alert_rate": 0.5454545454545454,
+        "step": 726,
+        "transaction_count": 22
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.4166666666666667,
+        "step": 727,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 728,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.75,
+        "step": 729,
+        "transaction_count": 4
+      },
+      {
+        "alert_count": 21,
+        "alert_rate": 0.75,
+        "step": 730,
+        "transaction_count": 28
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.25,
+        "step": 731,
+        "transaction_count": 16
+      },
+      {
+        "alert_count": 3,
+        "alert_rate": 0.3,
+        "step": 732,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.6,
+        "step": 733,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.75,
+        "step": 734,
+        "transaction_count": 8
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.3333333333333333,
+        "step": 735,
+        "transaction_count": 12
+      },
+      {
+        "alert_count": 6,
+        "alert_rate": 0.42857142857142855,
+        "step": 736,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.7,
+        "step": 737,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.5,
+        "step": 738,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.4,
+        "step": 739,
+        "transaction_count": 10
+      },
+      {
+        "alert_count": 5,
+        "alert_rate": 0.8333333333333334,
+        "step": 740,
+        "transaction_count": 6
+      },
+      {
+        "alert_count": 13,
+        "alert_rate": 0.5909090909090909,
+        "step": 741,
+        "transaction_count": 22
+      },
+      {
+        "alert_count": 4,
+        "alert_rate": 0.2857142857142857,
+        "step": 742,
+        "transaction_count": 14
+      },
+      {
+        "alert_count": 7,
+        "alert_rate": 0.875,
+        "step": 743,
+        "transaction_count": 8
+      }
+    ],
+    "fraud_probability": {
+      "above_frozen_threshold_count": 2457,
+      "above_frozen_threshold_proportion": 0.0025707720895972144,
+      "bins": [
+        {
+          "bin": "0.0-0.1",
+          "count": 946712,
+          "proportion": 0.9905497706498811
+        },
+        {
+          "bin": "0.1-0.2",
+          "count": 5551,
+          "proportion": 0.00580804064686778
+        },
+        {
+          "bin": "0.2-0.3",
+          "count": 822,
+          "proportion": 0.0008600629457260521
+        },
+        {
+          "bin": "0.3-0.4",
+          "count": 443,
+          "proportion": 0.0004635132420397094
+        },
+        {
+          "bin": "0.4-0.5",
+          "count": 420,
+          "proportion": 0.00043944822044396825
+        },
+        {
+          "bin": "0.5-0.6",
+          "count": 176,
+          "proportion": 0.00018414973047175813
+        },
+        {
+          "bin": "0.6-0.7",
+          "count": 86,
+          "proportion": 8.998225466233636e-05
+        },
+        {
+          "bin": "0.7-0.8",
+          "count": 224,
+          "proportion": 0.00023437238423678307
+        },
+        {
+          "bin": "0.8-0.9",
+          "count": 589,
+          "proportion": 0.0006162738139083269
+        },
+        {
+          "bin": "0.9-1.0",
+          "count": 721,
+          "proportion": 0.0007543861117621456
+        }
+      ],
+      "count": 955744,
+      "max": 0.9697095098945724,
+      "mean": 0.00517073307968038,
+      "median": 0.0,
+      "min": 0.0,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "quantiles": {
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 0.0193908707988146
+      }
+    },
+    "missingness": {
+      "baseline_anomaly_intensity": 0,
+      "behavioral_anomaly_intensity": 0,
+      "fraud_probability": 0
+    },
+    "transaction_count": 955744,
+    "transaction_types": [
+      {
+        "count": 211963,
+        "proportion": 0.2217780074999163,
+        "type": "CASH_IN"
+      },
+      {
+        "count": 324885,
+        "proportion": 0.339928893092711,
+        "type": "CASH_OUT"
+      },
+      {
+        "count": 6765,
+        "proportion": 0.007078255265008203,
+        "type": "DEBIT"
+      },
+      {
+        "count": 328939,
+        "proportion": 0.3441706147252821,
+        "type": "PAYMENT"
+      },
+      {
+        "count": 83192,
+        "proportion": 0.0870442294170824,
+        "type": "TRANSFER"
+      }
+    ]
+  },
+  "window_summaries": [
+    {
+      "complete_step_window": true,
+      "end_step": 378,
+      "expected_transaction_count": 37127,
+      "start_step": 378,
+      "summary": {
+        "alert_count": 5,
+        "alert_rate": 0.00013467287957551107,
+        "amount": {
+          "count": 37127,
+          "max": 7571526.87,
+          "mean": 148988.04557276375,
+          "median": 79634.85,
+          "min": 2.51,
+          "missing_count": 0,
+          "missing_rate": 0.0,
+          "quantiles": {
+            "p05": 2495.110000000001,
+            "p25": 14923.145,
+            "p50": 79634.85,
+            "p75": 203511.885,
+            "p95": 458957.0449999999
+          }
+        },
+        "anomaly": {
+          "baseline_anomaly_intensity": {
+            "bins": [
+              {
+                "bin": "0.0-0.1",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.1-0.2",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.2-0.3",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.3-0.4",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.4-0.5",
+                "count": 29030,
+                "proportion": 0.7819107388154174
+              },
+              {
+                "bin": "0.5-0.6",
+                "count": 5507,
+                "proportion": 0.14832870956446792
+              },
+              {
+                "bin": "0.6-0.7",
+                "count": 2220,
+                "proportion": 0.05979475853152692
+              },
+              {
+                "bin": "0.7-0.8",
+                "count": 369,
+                "proportion": 0.009938858512672719
+              },
+              {
+                "bin": "0.8-0.9",
+                "count": 1,
+                "proportion": 2.6934575915102215e-05
+              },
+              {
+                "bin": "0.9-1.0",
+                "count": 0,
+                "proportion": 0.0
+              }
+            ],
+            "count": 37127,
+            "interpretation": "contextual anomaly intensity, not a fraud probability",
+            "max": 0.8014088450369746,
+            "mean": 0.46754914773787537,
+            "median": 0.4372678030344373,
+            "min": 0.4077746068477597,
+            "missing_count": 0,
+            "missing_rate": 0.0,
+            "quantiles": {
+              "p05": 0.4094848008854584,
+              "p25": 0.4194024130382116,
+              "p50": 0.4372678030344373,
+              "p75": 0.48797498683798546,
+              "p95": 0.623929713269583
+            }
+          },
+          "behavioral_anomaly_intensity": {
+            "bins": [
+              {
+                "bin": "0.0-0.1",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.1-0.2",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.2-0.3",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.3-0.4",
+                "count": 12004,
+                "proportion": 0.323322649284887
+              },
+              {
+                "bin": "0.4-0.5",
+                "count": 17335,
+                "proportion": 0.4669108734882969
+              },
+              {
+                "bin": "0.5-0.6",
+                "count": 5828,
+                "proportion": 0.15697470843321573
+              },
+              {
+                "bin": "0.6-0.7",
+                "count": 1740,
+                "proportion": 0.046866162092277855
+              },
+              {
+                "bin": "0.7-0.8",
+                "count": 220,
+                "proportion": 0.005925606701322488
+              },
+              {
+                "bin": "0.8-0.9",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.9-1.0",
+                "count": 0,
+                "proportion": 0.0
+              }
+            ],
+            "count": 37127,
+            "interpretation": "contextual anomaly intensity, not a fraud probability",
+            "max": 0.7838237650122478,
+            "mean": 0.4545387884128909,
+            "median": 0.4401047149272446,
+            "min": 0.3849815035287259,
+            "missing_count": 0,
+            "missing_rate": 0.0,
+            "quantiles": {
+              "p05": 0.3853410329137595,
+              "p25": 0.3919482858686592,
+              "p50": 0.4401047149272446,
+              "p75": 0.48608803139847057,
+              "p95": 0.6035170545360541
+            }
+          }
+        },
+        "by_step": [
+          {
+            "alert_count": 5,
+            "alert_rate": 0.00013467287957551107,
+            "step": 378,
+            "transaction_count": 37127
+          }
+        ],
+        "fraud_probability": {
+          "above_frozen_threshold_count": 5,
+          "above_frozen_threshold_proportion": 0.00013467287957551107,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "count": 36892,
+              "proportion": 0.993670374659951
+            },
+            {
+              "bin": "0.1-0.2",
+              "count": 216,
+              "proportion": 0.005817868397662079
+            },
+            {
+              "bin": "0.2-0.3",
+              "count": 13,
+              "proportion": 0.0003501494868963288
+            },
+            {
+              "bin": "0.3-0.4",
+              "count": 4,
+              "proportion": 0.00010773830366040886
+            },
+            {
+              "bin": "0.4-0.5",
+              "count": 1,
+              "proportion": 2.6934575915102215e-05
+            },
+            {
+              "bin": "0.5-0.6",
+              "count": 1,
+              "proportion": 2.6934575915102215e-05
+            },
+            {
+              "bin": "0.6-0.7",
+              "count": 0,
+              "proportion": 0.0
+            },
+            {
+              "bin": "0.7-0.8",
+              "count": 0,
+              "proportion": 0.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "count": 0,
+              "proportion": 0.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "count": 0,
+              "proportion": 0.0
+            }
+          ],
+          "count": 37127,
+          "max": 0.5592217169226091,
+          "mean": 0.003375525475232066,
+          "median": 0.0,
+          "min": 0.0,
+          "missing_count": 0,
+          "missing_rate": 0.0,
+          "quantiles": {
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0199004718052815
+          }
+        },
+        "missingness": {
+          "baseline_anomaly_intensity": 0,
+          "behavioral_anomaly_intensity": 0,
+          "fraud_probability": 0
+        },
+        "transaction_count": 37127,
+        "transaction_types": [
+          {
+            "count": 7894,
+            "proportion": 0.2126215422738169,
+            "type": "CASH_IN"
+          },
+          {
+            "count": 14583,
+            "proportion": 0.39278692056993564,
+            "type": "CASH_OUT"
+          },
+          {
+            "count": 177,
+            "proportion": 0.004767419936973092,
+            "type": "DEBIT"
+          },
+          {
+            "count": 11502,
+            "proportion": 0.3098014921755057,
+            "type": "PAYMENT"
+          },
+          {
+            "count": 2971,
+            "proportion": 0.08002262504376868,
+            "type": "TRANSFER"
+          }
+        ]
+      },
+      "window_id": "step_378"
+    },
+    {
+      "complete_step_window": true,
+      "end_step": 379,
+      "expected_transaction_count": 41759,
+      "start_step": 379,
+      "summary": {
+        "alert_count": 26,
+        "alert_rate": 0.0006226202734739817,
+        "amount": {
+          "count": 41759,
+          "max": 8317724.27,
+          "mean": 140035.78016882588,
+          "median": 74694.46,
+          "min": 1.78,
+          "missing_count": 0,
+          "missing_rate": 0.0,
+          "quantiles": {
+            "p05": 2341.13,
+            "p25": 13611.119999999999,
+            "p50": 74694.46,
+            "p75": 186498.10499999998,
+            "p95": 420348.5389999998
+          }
+        },
+        "anomaly": {
+          "baseline_anomaly_intensity": {
+            "bins": [
+              {
+                "bin": "0.0-0.1",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.1-0.2",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.2-0.3",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.3-0.4",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.4-0.5",
+                "count": 32877,
+                "proportion": 0.7873033358078498
+              },
+              {
+                "bin": "0.5-0.6",
+                "count": 5802,
+                "proportion": 0.13894010871907853
+              },
+              {
+                "bin": "0.6-0.7",
+                "count": 2671,
+                "proportion": 0.06396225963265403
+              },
+              {
+                "bin": "0.7-0.8",
+                "count": 409,
+                "proportion": 0.009794295840417635
+              },
+              {
+                "bin": "0.8-0.9",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.9-1.0",
+                "count": 0,
+                "proportion": 0.0
+              }
+            ],
+            "count": 41759,
+            "interpretation": "contextual anomaly intensity, not a fraud probability",
+            "max": 0.7976222631368639,
+            "mean": 0.4667943206185484,
+            "median": 0.4360183654394317,
+            "min": 0.4077746068477597,
+            "missing_count": 0,
+            "missing_rate": 0.0,
+            "quantiles": {
+              "p05": 0.4090921456912775,
+              "p25": 0.4187598583458583,
+              "p50": 0.4360183654394317,
+              "p75": 0.48648712400021554,
+              "p95": 0.631747707429838
+            }
+          },
+          "behavioral_anomaly_intensity": {
+            "bins": [
+              {
+                "bin": "0.0-0.1",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.1-0.2",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.2-0.3",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.3-0.4",
+                "count": 13707,
+                "proportion": 0.3282406187887641
+              },
+              {
+                "bin": "0.4-0.5",
+                "count": 19556,
+                "proportion": 0.4683062333868148
+              },
+              {
+                "bin": "0.5-0.6",
+                "count": 6309,
+                "proportion": 0.15108120405182116
+              },
+              {
+                "bin": "0.6-0.7",
+                "count": 1918,
+                "proportion": 0.04593021863550372
+              },
+              {
+                "bin": "0.7-0.8",
+                "count": 269,
+                "proportion": 0.006441725137096195
+              },
+              {
+                "bin": "0.8-0.9",
+                "count": 0,
+                "proportion": 0.0
+              },
+              {
+                "bin": "0.9-1.0",
+                "count": 0,
+                "proportion": 0.0
+              }
+            ],
+            "count": 41759,
+            "interpretation": "contextual anomaly intensity, not a fraud probability",
+            "max": 0.7795926307896472,
+            "mean": 0.4534901752502513,
+            "median": 0.4392835550818911,
+            "min": 0.3849815035287259,
+            "missing_count": 0,
+            "missing_rate": 0.0,
+            "quantiles": {
+              "p05": 0.3853410329137595,
+              "p25": 0.3919080981081205,
+              "p50": 0.4392835550818911,
+              "p75": 0.4835804923857884,
+              "p95": 0.6025191759358081
+            }
+          }
+        },
+        "by_step": [
+          {
+            "alert_count": 26,
+            "alert_rate": 0.0006226202734739817,
+            "step": 379,
+            "transaction_count": 41759
+          }
+        ],
+        "fraud_probability": {
+          "above_frozen_threshold_count": 26,
+          "above_frozen_threshold_proportion": 0.0006226202734739817,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "count": 41449,
+              "proportion": 0.9925764505855025
+            },
+            {
+              "bin": "0.1-0.2",
+              "count": 259,
+              "proportion": 0.006202255801144663
+            },
+            {
+              "bin": "0.2-0.3",
+              "count": 20,
+              "proportion": 0.0004789386719030628
+            },
+            {
+              "bin": "0.3-0.4",
+              "count": 13,
+              "proportion": 0.00031131013673699084
+            },
+            {
+              "bin": "0.4-0.5",
+              "count": 10,
+              "proportion": 0.0002394693359515314
+            },
+            {
+              "bin": "0.5-0.6",
+              "count": 1,
+              "proportion": 2.394693359515314e-05
+            },
+            {
+              "bin": "0.6-0.7",
+              "count": 1,
+              "proportion": 2.394693359515314e-05
+            },
+            {
+              "bin": "0.7-0.8",
+              "count": 0,
+              "proportion": 0.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "count": 2,
+              "proportion": 4.789386719030628e-05
+            },
+            {
+              "bin": "0.9-1.0",
+              "count": 4,
+              "proportion": 9.578773438061256e-05
+            }
+          ],
+          "count": 41759,
+          "max": 0.9697095098945724,
+          "mean": 0.003856205991809779,
+          "median": 0.0,
+          "min": 0.0,
+          "missing_count": 0,
+          "missing_rate": 0.0,
+          "quantiles": {
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0199330264477056
+          }
+        },
+        "missingness": {
+          "baseline_anomaly_intensity": 0,
+          "behavioral_anomaly_intensity": 0,
+          "fraud_probability": 0
+        },
+        "transaction_count": 41759,
+        "transaction_types": [
+          {
+            "count": 9026,
+            "proportion": 0.21614502262985225,
+            "type": "CASH_IN"
+          },
+          {
+            "count": 16458,
+            "proportion": 0.3941186331090304,
+            "type": "CASH_OUT"
+          },
+          {
+            "count": 204,
+            "proportion": 0.004885174453411241,
+            "type": "DEBIT"
+          },
+          {
+            "count": 12827,
+            "proportion": 0.3071673172250293,
+            "type": "PAYMENT"
+          },
+          {
+            "count": 3244,
+            "proportion": 0.0776838525826768,
+            "type": "TRANSFER"
+          }
+        ]
+      },
+      "window_id": "step_379"
+    }
+  ],
+  "windows": [
+    {
+      "created_at_utc": "",
+      "end_step": 378,
+      "purpose": "reference",
+      "selection_rationale": "earliest complete holdout step",
+      "source_versions": {},
+      "start_step": 378,
+      "window_id": "step_378"
+    },
+    {
+      "created_at_utc": "",
+      "end_step": 379,
+      "purpose": "comparison",
+      "selection_rationale": "immediately following complete step",
+      "source_versions": {},
+      "start_step": 379,
+      "window_id": "step_379"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "freeze_manifest_schema": "module7_v1_freeze_manifest_v1",
+  "module": "Module 7",
+  "version": "module7_v1_frozen",
+  "frozen_at_utc": "2026-10-13T18:10:00Z",
+  "status": "frozen",
+  "scope": "Read-only retrospective monitoring over frozen Module 4 scores, Module 6 metadata, and mutable analyst feedback.",
+  "schema_versions": {
+    "configuration": "module7_stage5_monitoring_config_v1",
+    "lifecycle": "module7_stage5_monitoring_lifecycle_v1",
+    "stage2_monitoring": "module7_stage2_monitoring_v1",
+    "stage3_drift": "module7_stage3_drift_v1",
+    "stage4_feedback": "module7_stage4_feedback_v1"
+  },
+  "configuration": {
+    "path": "configs/module7_stage5_monitoring_v1.json",
+    "sha256": "2446237b2cc688531610788d6d01e5b032cfb89f36f55c8548d118ee7d8c1224",
+    "run_id": "stage6_validation_step378_vs_379_20261013",
+    "frozen_model_version": "module4_stage4_rf_primary_v1",
+    "frozen_threshold": 0.3494391872980995,
+    "reference_step_window": [378, 378],
+    "comparison_step_window": [379, 379]
+  },
+  "validation_run": {
+    "manifest": "artifacts/module7_stage5_monitoring/stage6_validation_step378_vs_379_20261013/manifest.json",
+    "manifest_sha256": "cd3c7f98effa3979e206f4df7dbdf6d1fa39ec897b18baeb4e4326a393645549",
+    "monitoring_output": "artifacts/module7_stage5_monitoring/stage6_validation_step378_vs_379_20261013/monitoring.json",
+    "monitoring_output_sha256": "7cf0aaa744e0d9a4e85bf6ae8e0e6d675479086e1654c3a8cd13380aeeae203d",
+    "drift_output": "artifacts/module7_stage5_monitoring/stage6_validation_step378_vs_379_20261013/drift.json",
+    "drift_output_sha256": "9e89864c2d1af403d4103a3758c208bb3d4ecd2189887e9d5cf3314184fb0047",
+    "feedback_output": "artifacts/module7_stage5_monitoring/stage6_validation_step378_vs_379_20261013/feedback.json",
+    "feedback_output_sha256": "bc26950a3299a75ec866337c8cecfd8101b5321333400a992c67bbba2d10439a",
+    "independent_metrics": {
+      "step_378_transaction_count": 37127,
+      "step_378_alert_count": 5,
+      "step_379_transaction_count": 41759,
+      "step_379_alert_count": 26,
+      "fraud_probability_ks": 0.0032927411018629504,
+      "fraud_probability_psi": 0.0037611085021947016,
+      "amount_psi": 0.0015197904871388267,
+      "transaction_type_jensen_shannon": 1.964433729665564e-05,
+      "score_missing_values": 0,
+      "metadata_missing_values": 0,
+      "feedback_event_count": 0,
+      "feedback_database_read_only_unchanged": true
+    },
+    "reproducibility": {
+      "calculation_outputs_equal_after_removing_run_timestamps": true,
+      "output_checksums_verified": true,
+      "complete_step_enforcement_verified": true,
+      "source_alignment_verified": true,
+      "threshold_consistency_verified": true,
+      "privacy_exclusions_verified": true
+    }
+  },
+  "frozen_inputs": {
+    "module4_score_cache": {
+      "path": "artifacts/module4_final_holdout_recovery_v1/complete_holdout_scores.csv",
+      "sha256": "16ab136cab8313db935fb30a6f182ddd15db7de28c9d76bdfa089345a35f9410"
+    },
+    "module4_recovery_manifest": {
+      "path": "artifacts/module4_final_holdout_recovery_v1/recovery_manifest.json",
+      "sha256": "a03ed580339f46c136739896acfc197e564855c1744ad0beb274a874fd472c15"
+    },
+    "module5_freeze_manifest": {
+      "path": "artifacts/module5_authoritative_v1/module5_v1_freeze_manifest.json",
+      "sha256": "cba41469946685007cf475c3bfe2661076b19ca028bc883d1920f724aaa6d83c"
+    },
+    "module6_freeze_manifest": {
+      "path": "artifacts/module6_v1_freeze_manifest.json",
+      "sha256": "3d286b4f2e5fceca079c294a0be54ff80ad6286c7e1c34bbd687da4c924006fc"
+    }
+  },
+  "source_code_checksums": {
+    "src/monitoring/contracts.py": "f0f5a5b5e61263d603925387b87a80c456bd78c7f37f9c27ac3f129e9633d4cc",
+    "src/monitoring/data_access.py": "4452ef874091bbd8a370d581c57482511a8b1ce4c810d760cde79b47b05bd323",
+    "src/monitoring/drift.py": "4ad6efa9e060fbeca09ee11037fd5b42bd8810facb08efe1dc87f482463c64ce",
+    "src/monitoring/engine.py": "8fc8918bba5dcf74928a616fa21b06c5b6434576eb69541c8659a6e70248def0",
+    "src/monitoring/feedback.py": "c0d056afda45bb9a8332e635140566d990f05707dab436401c5136167c51e7c5",
+    "src/monitoring/lifecycle.py": "e08e16f5a1517dbea4eb5021a85fc40d1ecebecc513580607c1fe3af4833ba63",
+    "src/monitoring/summaries.py": "5c74a32b2dc64bfc7935269adb1633c611fa1446dcc4d6d43ff930f2873cd4eb",
+    "src/monitoring/__init__.py": "94786dcd9afae420324d31d844f351c45088bca9f3102a88c82c0a2276f95bf7"
+  },
+  "tests": {
+    "focused_command": "python -m pytest -q tests/test_monitoring_stage2.py tests/test_monitoring_stage3.py tests/test_monitoring_stage4.py tests/test_monitoring_stage5.py",
+    "focused_passed": 30,
+    "full_command": "python -m pytest -q",
+    "full_passed": 141,
+    "failures": 0
+  },
+  "provenance": {
+    "dataset": "PaySim simulated mobile-money transactions",
+    "ground_truth_labels_used_for_monitoring_decisions": false,
+    "analyst_feedback_treated_as_verified_ground_truth": false,
+    "raw_paysim_csv_loaded_by_runner": false,
+    "models_retrained": false,
+    "frozen_threshold_modified": false,
+    "modules_4_to_6_modified": false
+  },
+  "limitations": [
+    "PaySim is simulated and monitoring findings are descriptive research outputs.",
+    "PSI, KS, and Jensen-Shannon values are distribution comparisons, not significance tests or degradation decisions.",
+    "Analyst feedback is mutable workflow information and contains no independently verified fraud labels.",
+    "The bounded validation covers steps 378 and 379 only; it is not a production deployment evaluation.",
+    "Run timestamps and filesystem metadata vary by execution even when calculations are reproducible."
+  ]
+}

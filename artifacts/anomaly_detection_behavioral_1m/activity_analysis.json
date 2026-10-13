@@ -1,0 +1,65 @@
+{
+  "rows": 1000000,
+  "unique_origin_accounts": 999759,
+  "unique_destination_accounts": 422896,
+  "origin_accounts_repeated": 241,
+  "destination_accounts_repeated": 76035,
+  "rows_from_repeated_origins_rate": 0.000482,
+  "rows_to_repeated_destinations_rate": 0.653139,
+  "train_origin_accounts": 699717,
+  "train_destination_accounts": 301268,
+  "test_rows_with_prior_sender_history": 114,
+  "test_rows_with_prior_sender_history_rate": 0.00037977846256350464,
+  "test_rows_with_prior_receiver_history": 154110,
+  "test_rows_with_prior_receiver_history_rate": 0.5134005163654535,
+  "test_senders_seen_in_training": 114,
+  "test_receivers_seen_in_training": 55604,
+  "behavioral_feature_nonzero_rates": {
+    "sender_txn_count_prior": {
+      "all_rows_nonzero_rate": 0.000229,
+      "train_rows_nonzero_rate": 0.00014146393741292467,
+      "test_rows_nonzero_rate": 0.00043308070292329473
+    },
+    "sender_velocity_3_steps_prior": {
+      "all_rows_nonzero_rate": 3.2e-05,
+      "train_rows_nonzero_rate": 3.0007501875468866e-05,
+      "test_rows_nonzero_rate": 3.664529024735571e-05
+    },
+    "sender_avg_amount_prior": {
+      "all_rows_nonzero_rate": 0.000229,
+      "train_rows_nonzero_rate": 0.00014146393741292467,
+      "test_rows_nonzero_rate": 0.00043308070292329473
+    },
+    "sender_amount_ratio_to_avg_prior": {
+      "all_rows_nonzero_rate": 0.000229,
+      "train_rows_nonzero_rate": 0.00014146393741292467,
+      "test_rows_nonzero_rate": 0.00043308070292329473
+    },
+    "sender_same_type_count_prior": {
+      "all_rows_nonzero_rate": 6e-05,
+      "train_rows_nonzero_rate": 3.143643053620548e-05,
+      "test_rows_nonzero_rate": 0.00012659282085450153
+    },
+    "sender_same_type_share_prior": {
+      "all_rows_nonzero_rate": 6e-05,
+      "train_rows_nonzero_rate": 3.143643053620548e-05,
+      "test_rows_nonzero_rate": 0.00012659282085450153
+    },
+    "receiver_txn_count_prior": {
+      "all_rows_nonzero_rate": 0.543224,
+      "train_rows_nonzero_rate": 0.5252813203300826,
+      "test_rows_nonzero_rate": 0.5850553843591239
+    },
+    "receiver_avg_amount_prior": {
+      "all_rows_nonzero_rate": 0.543224,
+      "train_rows_nonzero_rate": 0.5252813203300826,
+      "test_rows_nonzero_rate": 0.5850553843591239
+    },
+    "receiver_amount_ratio_to_avg_prior": {
+      "all_rows_nonzero_rate": 0.543224,
+      "train_rows_nonzero_rate": 0.5252813203300826,
+      "test_rows_nonzero_rate": 0.5850553843591239
+    }
+  },
+  "history_definition": "Training-account membership is measured using rows from earlier steps only; same-step rows are not used as history."
+}

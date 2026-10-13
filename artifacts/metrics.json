@@ -1,0 +1,59 @@
+{
+  "data_source": "synthetic",
+  "synthetic_data": true,
+  "split": "random stratified 75/25; not a temporal validation",
+  "seed": 42,
+  "target": "is_fraud",
+  "features": [
+    "amount",
+    "hour",
+    "transactions_last_hour",
+    "device_changed",
+    "failed_logins_24h",
+    "channel"
+  ],
+  "models": {
+    "logistic_regression": {
+      "rows": 1250,
+      "fraud_count": 47,
+      "fraud_rate": 0.0376,
+      "average_precision": 0.36591038629422323,
+      "roc_auc": 0.7950336923648326,
+      "precision_at_threshold": 0.11524163568773234,
+      "recall_at_threshold": 0.6595744680851063,
+      "f1_at_threshold": 0.1962025316455696,
+      "confusion_matrix": [
+        [
+          965,
+          238
+        ],
+        [
+          16,
+          31
+        ]
+      ],
+      "threshold": 0.5
+    },
+    "random_forest": {
+      "rows": 1250,
+      "fraud_count": 47,
+      "fraud_rate": 0.0376,
+      "average_precision": 0.34987784383138343,
+      "roc_auc": 0.7679383102527371,
+      "precision_at_threshold": 0.5185185185185185,
+      "recall_at_threshold": 0.2978723404255319,
+      "f1_at_threshold": 0.3783783783783784,
+      "confusion_matrix": [
+        [
+          1190,
+          13
+        ],
+        [
+          33,
+          14
+        ]
+      ],
+      "threshold": 0.5
+    }
+  }
+}

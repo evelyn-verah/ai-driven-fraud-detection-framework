@@ -1,0 +1,83 @@
+{
+  "analyst_safe_display_fields": [
+    "row_id",
+    "step",
+    "fraud_probability",
+    "baseline_anomaly_intensity",
+    "behavioral_anomaly_intensity",
+    "rule_score_context",
+    "alert"
+  ],
+  "change_rationale": "Remove internal PaySim isFraud from analyst-facing Transaction Explorer tables through an explicit display allowlist. Backend alignment validation remains unchanged.",
+  "corrected_source_sha256": {
+    "src/dashboard/app.py": "d183f95ed9e0a45de1fdc2da385f88a7d52c2320abcc1fd6395d2b993ca71495",
+    "src/dashboard/config.py": "adefc2b0698de73abd24c12b3fbd080bd1493ad180938401d0a33805786a8b6c",
+    "src/dashboard/data_access.py": "0604fde0f81248a73c2baa6eed5fe2fc6b586b3e5aa48f7226c73dbe1a2293ad"
+  },
+  "created_at_utc": "2026-10-13T01:33:53.971349+00:00",
+  "documentation_sha256": {
+    "IMPLEMENTATION_STATUS.md": "a0446436920cf75a49a135f5ed751749ba40e2107fe574c558a9b4bb922c3cda",
+    "docs/module6_post_freeze_issue_register.md": "0954081861504ad053c9fd81a1ddfbff998b8598c75723b9ca0d93566335d8e6"
+  },
+  "feedback_schema_unchanged": true,
+  "frozen_dependency_references": {
+    "metadata_sidecar": {
+      "manifest_sha256": "9f39fd98b84f454d1da781740edc5c0867a0656cb0288b4fdb507a757a3f2492",
+      "parquet_sha256": "a3062d6d10af8785c474bc9c7b148239e0b3c2355dbe0102734492a978055cc5",
+      "path": "artifacts/dashboard_metadata_index_v1"
+    },
+    "module4": {
+      "architecture_version": "module4_stage4_rf_primary_v1",
+      "manifest": "artifacts/module4_final_holdout_recovery_v1/recovery_manifest.json",
+      "sha256": "a03ed580339f46c136739896acfc197e564855c1744ad0beb274a874fd472c15",
+      "threshold": 0.3494391872980995
+    },
+    "module5": {
+      "manifest": "artifacts/module5_authoritative_v1/module5_v1_freeze_manifest.json",
+      "sha256": "cba41469946685007cf475c3bfe2661076b19ca028bc883d1920f724aaa6d83c",
+      "version": "module5_authoritative_v1"
+    },
+    "score_cache": {
+      "path": "artifacts/module4_final_holdout_recovery_v1/complete_holdout_scores.csv",
+      "sha256": "16ab136cab8313db935fb30a6f182ddd15db7de28c9d76bdfa089345a35f9410"
+    }
+  },
+  "historical_v1_manifest": "artifacts/module6_v1_freeze_manifest.json",
+  "historical_v1_manifest_sha256": "3d286b4f2e5fceca079c294a0be54ff80ad6286c7e1c34bbd687da4c924006fc",
+  "internal_only_fields": [
+    "isFraud",
+    "nameOrig",
+    "nameDest",
+    "isFlaggedFraud"
+  ],
+  "limitations": [
+    "The historical V1 manifest remains evidence of the prior source and its label-exposure defect.",
+    "V1.1 is a working-tree maintenance correction; the V1 source snapshot provides byte-for-byte reproducibility.",
+    "The PaySim label remains in backend score-cache validation and frozen artifacts, never in analyst display projections."
+  ],
+  "maintenance_version": "module6_dashboard_v1_1",
+  "mutable_feedback_exclusions": {
+    "demonstration_database": "artifacts/module6_feedback/reviews.sqlite3",
+    "included_in_manifest": false,
+    "production_database": "artifacts/module6_feedback/production_reviews.sqlite3"
+  },
+  "regression_test_sha256": {
+    "tests/test_dashboard_data_access.py": "58904493c1a61c00c555fb40fc6314147364208bab7487cc837e7d8802925e52"
+  },
+  "schema_version": "module6_v1_1_maintenance_manifest_v1",
+  "status": "complete",
+  "v1_source_snapshot_manifest": "artifacts/module6_v1_1/v1_source_snapshot_manifest.json",
+  "v1_source_snapshot_manifest_sha256": "dde9c4d9b8f0fdfccd76dee7a72005b19a2e99acc510a219e7a227598935c5ef",
+  "validation": {
+    "focused_tests": "22 passed",
+    "frozen_artifacts_unchanged": true,
+    "full_suite_current": "111 passed",
+    "full_suite_failed": 0,
+    "full_suite_prior": "110 passed",
+    "knowledge_base_regenerated": false,
+    "models_retrained": false,
+    "new_test_added": "analyst display projection excludes internal labels and identifiers",
+    "sidecar_rebuilt": false,
+    "transactions_rescored": false
+  }
+}

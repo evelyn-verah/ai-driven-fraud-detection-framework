@@ -1,0 +1,38 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# Local/runtime state
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# Raw and locally generated datasets
+data/raw/
+data/processed/
+
+# Large generated score tables and tabular exports. Keep manifests, JSON
+# provenance, model files, source code, and documentation under version control.
+artifacts/**/*.csv
+artifacts/**/*.parquet
+artifacts/**/*.feather
+artifacts/**/*.pkl
+artifacts/**/*.pickle
+
+# Editor and operating-system files
+.vscode/*.code-workspace
+.idea/
+.DS_Store
+Thumbs.db

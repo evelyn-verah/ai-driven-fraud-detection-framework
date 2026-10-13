@@ -1,0 +1,530 @@
+{
+  "evaluation_version": "module5_stage6c_authoritative_retrieval_v1",
+  "created_at_utc": "2026-10-12T22:25:58.473333+00:00",
+  "knowledge_base_version": "module5_authoritative_v1",
+  "document_count": 10,
+  "chunk_count": 10,
+  "case_count": 31,
+  "relevant_case_count": 27,
+  "no_evidence_case_count": 4,
+  "filter_case_count": 3,
+  "metrics": {
+    "recall_at_3": 0.8641975308641976,
+    "precision_at_3": 0.4444444444444444,
+    "mean_reciprocal_rank": 0.9197530864197531,
+    "no_evidence_rejection_accuracy": 0.75,
+    "filter_correctness": 1.0,
+    "citation_correctness": 1.0
+  },
+  "false_positive_cases": [
+    {
+      "case_id": "unrelated-03",
+      "returned": [
+        "fincen-imposter-mule-advisory-2020"
+      ]
+    }
+  ],
+  "missed_relevant_cases": [
+    "transfer-02"
+  ],
+  "case_results": [
+    {
+      "case_id": "ato-01",
+      "returned_document_ids": [
+        "fbi-ato-financial-support-2025",
+        "cisa-phishing-guidance-phase-one",
+        "ic3-social-engineering-psa-2024"
+      ],
+      "expected_document_ids": [
+        "fbi-ato-financial-support-2025"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "ato-02",
+      "returned_document_ids": [
+        "fbi-ato-financial-support-2025",
+        "ic3-social-engineering-psa-2024",
+        "ftc-what-to-do-scammed"
+      ],
+      "expected_document_ids": [
+        "fbi-ato-financial-support-2025",
+        "ic3-social-engineering-psa-2024"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "ato-03",
+      "returned_document_ids": [
+        "fbi-ato-financial-support-2025",
+        "ic3-bec-psa-2024",
+        "ic3-social-engineering-psa-2024"
+      ],
+      "expected_document_ids": [
+        "fbi-ato-financial-support-2025"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "phishing-01",
+      "returned_document_ids": [
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "expected_document_ids": [
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "phishing-02",
+      "returned_document_ids": [
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "expected_document_ids": [
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "phishing-03",
+      "returned_document_ids": [
+        "ftc-business-impersonator-scams",
+        "ic3-bec-psa-2024",
+        "ftc-what-to-do-scammed"
+      ],
+      "expected_document_ids": [
+        "ftc-what-to-do-scammed",
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "social-01",
+      "returned_document_ids": [
+        "ic3-social-engineering-psa-2024",
+        "ic3-annual-report-2024",
+        "fbi-ato-financial-support-2025"
+      ],
+      "expected_document_ids": [
+        "ic3-social-engineering-psa-2024"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "social-02",
+      "returned_document_ids": [
+        "ic3-social-engineering-psa-2024",
+        "fbi-ato-financial-support-2025",
+        "ic3-bec-psa-2024"
+      ],
+      "expected_document_ids": [
+        "ic3-social-engineering-psa-2024",
+        "fbi-ato-financial-support-2025"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "social-03",
+      "returned_document_ids": [
+        "ftc-business-impersonator-scams",
+        "fbi-ato-financial-support-2025",
+        "ic3-bec-psa-2024"
+      ],
+      "expected_document_ids": [
+        "ftc-business-impersonator-scams",
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "payment-01",
+      "returned_document_ids": [
+        "ftc-payment-apps-2023",
+        "ftc-business-impersonator-scams",
+        "fbi-money-mule-awareness-2019"
+      ],
+      "expected_document_ids": [
+        "ftc-payment-apps-2023"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "payment-02",
+      "returned_document_ids": [
+        "ftc-payment-apps-2023",
+        "ftc-business-impersonator-scams"
+      ],
+      "expected_document_ids": [
+        "ftc-payment-apps-2023"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "payment-03",
+      "returned_document_ids": [
+        "ftc-what-to-do-scammed",
+        "ftc-payment-apps-2023",
+        "ftc-business-impersonator-scams"
+      ],
+      "expected_document_ids": [
+        "ftc-payment-apps-2023",
+        "ftc-what-to-do-scammed"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "mule-01",
+      "returned_document_ids": [
+        "fbi-money-mule-awareness-2019",
+        "fbi-ato-financial-support-2025",
+        "fincen-imposter-mule-advisory-2020"
+      ],
+      "expected_document_ids": [
+        "fbi-money-mule-awareness-2019",
+        "fincen-imposter-mule-advisory-2020"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "mule-02",
+      "returned_document_ids": [
+        "fbi-money-mule-awareness-2019",
+        "ic3-bec-psa-2024",
+        "ic3-social-engineering-psa-2024"
+      ],
+      "expected_document_ids": [
+        "fbi-money-mule-awareness-2019"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "mule-03",
+      "returned_document_ids": [
+        "fincen-imposter-mule-advisory-2020",
+        "fbi-money-mule-awareness-2019",
+        "fbi-ato-financial-support-2025"
+      ],
+      "expected_document_ids": [
+        "fincen-imposter-mule-advisory-2020",
+        "fbi-money-mule-awareness-2019"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "bec-01",
+      "returned_document_ids": [
+        "ic3-bec-psa-2024",
+        "ftc-what-to-do-scammed",
+        "ic3-annual-report-2024"
+      ],
+      "expected_document_ids": [
+        "ic3-bec-psa-2024"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "bec-02",
+      "returned_document_ids": [
+        "ic3-bec-psa-2024",
+        "ftc-payment-apps-2023",
+        "fbi-ato-financial-support-2025"
+      ],
+      "expected_document_ids": [
+        "ic3-bec-psa-2024",
+        "fbi-money-mule-awareness-2019"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "bec-03",
+      "returned_document_ids": [
+        "ic3-bec-psa-2024",
+        "ftc-business-impersonator-scams",
+        "ic3-annual-report-2024"
+      ],
+      "expected_document_ids": [
+        "ic3-bec-psa-2024"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "transfer-01",
+      "returned_document_ids": [
+        "fincen-imposter-mule-advisory-2020",
+        "ic3-bec-psa-2024"
+      ],
+      "expected_document_ids": [
+        "fincen-imposter-mule-advisory-2020",
+        "fbi-money-mule-awareness-2019"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "transfer-02",
+      "returned_document_ids": [
+        "ftc-what-to-do-scammed",
+        "ftc-payment-apps-2023",
+        "ic3-bec-psa-2024"
+      ],
+      "expected_document_ids": [
+        "fbi-money-mule-awareness-2019",
+        "fincen-imposter-mule-advisory-2020"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "transfer-03",
+      "returned_document_ids": [
+        "ftc-what-to-do-scammed",
+        "ftc-business-impersonator-scams",
+        "ftc-payment-apps-2023"
+      ],
+      "expected_document_ids": [
+        "ftc-what-to-do-scammed",
+        "ftc-payment-apps-2023"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "ambiguous-01",
+      "returned_document_ids": [
+        "ftc-payment-apps-2023",
+        "fbi-money-mule-awareness-2019",
+        "ftc-business-impersonator-scams"
+      ],
+      "expected_document_ids": [
+        "ftc-payment-apps-2023",
+        "ftc-business-impersonator-scams",
+        "fbi-money-mule-awareness-2019"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "ambiguous-02",
+      "returned_document_ids": [
+        "ic3-social-engineering-psa-2024",
+        "ic3-bec-psa-2024",
+        "fbi-ato-financial-support-2025"
+      ],
+      "expected_document_ids": [
+        "fbi-ato-financial-support-2025",
+        "ic3-bec-psa-2024",
+        "fincen-imposter-mule-advisory-2020"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "ambiguous-03",
+      "returned_document_ids": [
+        "ftc-business-impersonator-scams",
+        "ftc-payment-apps-2023",
+        "cisa-phishing-guidance-phase-one"
+      ],
+      "expected_document_ids": [
+        "cisa-phishing-guidance-phase-one",
+        "ic3-social-engineering-psa-2024",
+        "ftc-business-impersonator-scams"
+      ],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "unrelated-01",
+      "returned_document_ids": [],
+      "expected_document_ids": [],
+      "has_evidence": false,
+      "filter_applied": false
+    },
+    {
+      "case_id": "unrelated-02",
+      "returned_document_ids": [],
+      "expected_document_ids": [],
+      "has_evidence": false,
+      "filter_applied": false
+    },
+    {
+      "case_id": "unrelated-03",
+      "returned_document_ids": [
+        "fincen-imposter-mule-advisory-2020"
+      ],
+      "expected_document_ids": [],
+      "has_evidence": true,
+      "filter_applied": false
+    },
+    {
+      "case_id": "unrelated-04",
+      "returned_document_ids": [],
+      "expected_document_ids": [],
+      "has_evidence": false,
+      "filter_applied": false
+    },
+    {
+      "case_id": "filter-01",
+      "returned_document_ids": [
+        "ftc-payment-apps-2023"
+      ],
+      "expected_document_ids": [
+        "ftc-payment-apps-2023"
+      ],
+      "has_evidence": true,
+      "filter_applied": true
+    },
+    {
+      "case_id": "filter-02",
+      "returned_document_ids": [
+        "fbi-ato-financial-support-2025"
+      ],
+      "expected_document_ids": [
+        "fbi-ato-financial-support-2025"
+      ],
+      "has_evidence": true,
+      "filter_applied": true
+    },
+    {
+      "case_id": "filter-03",
+      "returned_document_ids": [
+        "fbi-money-mule-awareness-2019"
+      ],
+      "expected_document_ids": [
+        "fbi-money-mule-awareness-2019"
+      ],
+      "has_evidence": true,
+      "filter_applied": true
+    }
+  ],
+  "end_to_end_demo": {
+    "row_id": 8,
+    "step": 378,
+    "transaction_type": "PAYMENT",
+    "alert": false,
+    "fraud_probability": 0.0,
+    "query": "transaction_type PAYMENT rules amount_exceeds_oldbalanceOrg baseline_anomaly_indicator behavioral_anomaly_indicator",
+    "evidence": [
+      {
+        "chunk_id": "dbc70d76d164ffe0426e56bf",
+        "document_id": "ftc-payment-apps-2023",
+        "knowledge_base_version": "module5_authoritative_v1",
+        "passage": "The FTC describes payment-app scams in which an impostor claims to be a bank or trusted person and instructs the recipient to move money to a new account. The guidance emphasizes independently verifying the request and recognizing that payment-app transfers can be difficult to reverse. It does not classify any individual payment as fraudulent.",
+        "retrieval_score": 0.3328047875920165,
+        "source_organization": "Federal Trade Commission",
+        "source_type": "authoritative",
+        "source_url": "https://consumer.ftc.gov/consumer-alerts/2023/08/do-you-use-payment-apps-venmo-cashapp-or-zelle-read"
+      },
+      {
+        "chunk_id": "6c7f5aa8845199480e1c66c0",
+        "document_id": "ftc-business-impersonator-scams",
+        "knowledge_base_version": "module5_authoritative_v1",
+        "passage": "The FTC describes business-impersonator messages that appear to come from a familiar company but seek payment, personal information, or computer access. The guidance highlights unexpected contact, links or phone numbers supplied by the message, and hard-to-reverse payment demands. It recommends stopping and verifying the organization through trusted contact information.",
+        "retrieval_score": 0.2351436503559465,
+        "source_organization": "Federal Trade Commission",
+        "source_type": "authoritative",
+        "source_url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams"
+      },
+      {
+        "chunk_id": "21f2ec0b7e77bf208ada0e4c",
+        "document_id": "ftc-what-to-do-scammed",
+        "knowledge_base_version": "module5_authoritative_v1",
+        "passage": "The FTC provides response steps for scams involving bank transfers, payment apps, wire services, cryptocurrency, phishing, and compromised account information. It recommends contacting the relevant provider promptly, preserving evidence, changing compromised credentials, and using official reporting or recovery services. These are response recommendations, not a finding that a transaction is fraudulent.",
+        "retrieval_score": 0.1201134611713762,
+        "source_organization": "Federal Trade Commission",
+        "source_type": "authoritative",
+        "source_url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed"
+      }
+    ],
+    "explanation": {
+      "citations": [
+        "ftc-payment-apps-2023",
+        "ftc-business-impersonator-scams",
+        "ftc-what-to-do-scammed"
+      ],
+      "generator_version": "module5_stage4_deterministic_v1",
+      "model_indicators": [
+        "Fraud probability supplied by Module 4: 0.0.",
+        "Frozen alert threshold: 0.3494391872980995.",
+        "Alert decision supplied by Module 4: False.",
+        "Baseline anomaly intensity: 0.4105141308332483.",
+        "Behavioral anomaly intensity: 0.3865504013577598.",
+        "Triggered rules: amount_exceeds_oldbalanceOrg.",
+        "Rule score context: 0.5.",
+        "No individual Random Forest feature contribution or causal explanation was inferred."
+      ],
+      "observed_facts": [
+        "Transaction type observed: PAYMENT.",
+        "Transaction amount observed: 7899.43.",
+        "Simulation step observed: 378.",
+        "No optional behavioral features were supplied."
+      ],
+      "possible_interpretations": [
+        "Passage ftc-payment-apps-2023 (https://consumer.ftc.gov/consumer-alerts/2023/08/do-you-use-payment-apps-venmo-cashapp-or-zelle-read) describes an authoritative fraud pattern that may be relevant to review; retrieval similarity is not proof of fraud.",
+        "Passage ftc-business-impersonator-scams (https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams) describes an authoritative fraud pattern that may be relevant to review; retrieval similarity is not proof of fraud.",
+        "Passage ftc-what-to-do-scammed (https://consumer.ftc.gov/articles/what-do-if-you-were-scammed) describes an authoritative fraud pattern that may be relevant to review; retrieval similarity is not proof of fraud."
+      ],
+      "retrieved_evidence": [
+        {
+          "chunk_id": "dbc70d76d164ffe0426e56bf",
+          "document_id": "ftc-payment-apps-2023",
+          "knowledge_base_version": "module5_authoritative_v1",
+          "passage": "The FTC describes payment-app scams in which an impostor claims to be a bank or trusted person and instructs the recipient to move money to a new account. The guidance emphasizes independently verifying the request and recognizing that payment-app transfers can be difficult to reverse. It does not classify any individual payment as fraudulent.",
+          "retrieval_score": 0.3328047875920165,
+          "source_organization": "Federal Trade Commission",
+          "source_type": "authoritative",
+          "source_url": "https://consumer.ftc.gov/consumer-alerts/2023/08/do-you-use-payment-apps-venmo-cashapp-or-zelle-read"
+        },
+        {
+          "chunk_id": "6c7f5aa8845199480e1c66c0",
+          "document_id": "ftc-business-impersonator-scams",
+          "knowledge_base_version": "module5_authoritative_v1",
+          "passage": "The FTC describes business-impersonator messages that appear to come from a familiar company but seek payment, personal information, or computer access. The guidance highlights unexpected contact, links or phone numbers supplied by the message, and hard-to-reverse payment demands. It recommends stopping and verifying the organization through trusted contact information.",
+          "retrieval_score": 0.2351436503559465,
+          "source_organization": "Federal Trade Commission",
+          "source_type": "authoritative",
+          "source_url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams"
+        },
+        {
+          "chunk_id": "21f2ec0b7e77bf208ada0e4c",
+          "document_id": "ftc-what-to-do-scammed",
+          "knowledge_base_version": "module5_authoritative_v1",
+          "passage": "The FTC provides response steps for scams involving bank transfers, payment apps, wire services, cryptocurrency, phishing, and compromised account information. It recommends contacting the relevant provider promptly, preserving evidence, changing compromised credentials, and using official reporting or recovery services. These are response recommendations, not a finding that a transaction is fraudulent.",
+          "retrieval_score": 0.1201134611713762,
+          "source_organization": "Federal Trade Commission",
+          "source_type": "authoritative",
+          "source_url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed"
+        }
+      ],
+      "suggested_review_steps": [
+        "Review the transaction sequence and counterparties using approved investigative records.",
+        "Confirm relevant account-holder or payment-request details through a trusted channel.",
+        "Use the retrieved passages as context and retain the cited source for audit; do not take irreversible action from this explanation alone."
+      ],
+      "transaction_key": 8,
+      "uncertainty_and_limitations": [
+        "Retrieved passages provide general context and do not establish that this transaction is fraudulent.",
+        "Retrieved passages contain potentially conflicting language; an investigator should resolve the conflict against source material.",
+        "This component does not establish live financial-system deployment or a regulatory conclusion."
+      ]
+    }
+  }
+}

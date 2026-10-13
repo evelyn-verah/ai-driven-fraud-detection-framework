@@ -1,0 +1,142 @@
+{
+  "dataset": "PaySim (simulated mobile-money transactions)",
+  "input_file": "data/raw/PS_20174392719_1491204439457_log.csv",
+  "rows_loaded": 1000000,
+  "split": "chronological by step, approximate 70/15/15 transaction counts; no shared steps",
+  "threshold_selection": "maximum validation F1; test set untouched until final evaluation",
+  "splits": {
+    "train": {
+      "rows": 699825,
+      "fraud_count": 417,
+      "step_min": 1,
+      "step_max": 36
+    },
+    "validation": {
+      "rows": 159462,
+      "fraud_count": 67,
+      "step_min": 37,
+      "step_max": 41
+    },
+    "test": {
+      "rows": 140713,
+      "fraud_count": 51,
+      "step_min": 42,
+      "step_max": 45
+    }
+  },
+  "features": [
+    "step",
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest"
+  ],
+  "excluded": [
+    "isFraud (target)",
+    "isFlaggedFraud",
+    "is_anomaly",
+    "newbalanceOrig",
+    "newbalanceDest",
+    "nameOrig",
+    "nameDest"
+  ],
+  "models": {
+    "logistic_regression": {
+      "validation": {
+        "rows": 159462,
+        "fraud_count": 67,
+        "fraud_rate": 0.0004201627974062786,
+        "average_precision": 0.14187178879053822,
+        "roc_auc": 0.9512882901905666,
+        "threshold": 0.9999987847781961,
+        "precision": 0.8888888888888888,
+        "recall": 0.11940298507462686,
+        "f1": 0.21052631578947367,
+        "false_positives": 1,
+        "true_positives": 8,
+        "confusion_matrix": [
+          [
+            159394,
+            1
+          ],
+          [
+            59,
+            8
+          ]
+        ]
+      },
+      "test": {
+        "rows": 140713,
+        "fraud_count": 51,
+        "fraud_rate": 0.0003624398598565875,
+        "average_precision": 0.166554332444633,
+        "roc_auc": 0.9668087678403605,
+        "threshold": 0.9999987847781961,
+        "precision": 0.5,
+        "recall": 0.0392156862745098,
+        "f1": 0.07272727272727272,
+        "false_positives": 2,
+        "true_positives": 2,
+        "confusion_matrix": [
+          [
+            140660,
+            2
+          ],
+          [
+            49,
+            2
+          ]
+        ]
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "rows": 159462,
+        "fraud_count": 67,
+        "fraud_rate": 0.0004201627974062786,
+        "average_precision": 0.48750254158371864,
+        "roc_auc": 0.9821582822735033,
+        "threshold": 0.39935181232348915,
+        "precision": 0.6078431372549019,
+        "recall": 0.4626865671641791,
+        "f1": 0.5254237288135594,
+        "false_positives": 20,
+        "true_positives": 31,
+        "confusion_matrix": [
+          [
+            159375,
+            20
+          ],
+          [
+            36,
+            31
+          ]
+        ]
+      },
+      "test": {
+        "rows": 140713,
+        "fraud_count": 51,
+        "fraud_rate": 0.0003624398598565875,
+        "average_precision": 0.5642037583140616,
+        "roc_auc": 0.9850769373168501,
+        "threshold": 0.39935181232348915,
+        "precision": 0.56,
+        "recall": 0.5490196078431373,
+        "f1": 0.5544554455445545,
+        "false_positives": 22,
+        "true_positives": 28,
+        "confusion_matrix": [
+          [
+            140640,
+            22
+          ],
+          [
+            23,
+            28
+          ]
+        ]
+      }
+    }
+  },
+  "limitations": "PaySim is simulated; no real-world detection or operational performance claimed."
+}

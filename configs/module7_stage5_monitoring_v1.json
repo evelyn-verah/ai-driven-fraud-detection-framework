@@ -1,0 +1,41 @@
+{
+  "schema_version": "module7_stage5_monitoring_config_v1",
+  "run_id": "stage5_step378_vs_379_v2",
+  "reference_window": {
+    "window_id": "step_378",
+    "start_step": 378,
+    "end_step": 378,
+    "purpose": "reference",
+    "selection_rationale": "Earliest complete final-holdout step selected before inspecting outcomes."
+  },
+  "comparison_window": {
+    "window_id": "step_379",
+    "start_step": 379,
+    "end_step": 379,
+    "purpose": "comparison",
+    "selection_rationale": "Immediately following complete step selected before inspecting outcomes."
+  },
+  "summary_windows": [
+    {
+      "window_id": "step_378",
+      "start_step": 378,
+      "end_step": 378,
+      "purpose": "reference summary",
+      "selection_rationale": "Same predeclared reference window."
+    },
+    {
+      "window_id": "step_379",
+      "start_step": 379,
+      "end_step": 379,
+      "purpose": "comparison summary",
+      "selection_rationale": "Same predeclared comparison window."
+    }
+  ],
+  "output_dir": "artifacts/module7_stage5_monitoring",
+  "score_cache_path": "artifacts/module4_final_holdout_recovery_v1/complete_holdout_scores.csv",
+  "metadata_sidecar_path": "artifacts/dashboard_metadata_index_v1",
+  "feedback_enabled": true,
+  "feedback_db_path": "artifacts/module6_feedback/production_reviews.sqlite3",
+  "frozen_model_version": "module4_stage4_rf_primary_v1",
+  "frozen_threshold": 0.3494391872980995
+}

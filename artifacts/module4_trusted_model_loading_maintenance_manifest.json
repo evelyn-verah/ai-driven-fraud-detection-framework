@@ -1,0 +1,56 @@
+{
+  "schema_version": "module4_trusted_model_loading_maintenance_manifest_v1",
+  "maintenance_version": "module4_trusted_model_loading_v1_1",
+  "status": "complete",
+  "scope": "Trusted checksum verification before frozen model deserialization",
+  "historical_sources": {
+    "src/risk_engine/final_architecture.py": {
+      "original_sha256": "d531f6e8d0f84f092e048a930fee1b830a7e7330fd90c3609c98e3790d62332d",
+      "updated_sha256": "b3a76e26c0271ddf2cf14bad0957978e8eeabbe968be64454795d19a20554758",
+      "historical_manifest": "artifacts/module6_v1_freeze_manifest.json"
+    },
+    "src/risk_engine/run_development_evaluation.py": {
+      "original_sha256": "0aec8894f0e2814073453cf21bbfa7501635ab947ddd457f49e0b3b113e182d6",
+      "updated_sha256": "36e43d9b17846d6267fa746e9250712bd3bd774b616603f44d73e45e37fdf4ff",
+      "historical_manifest": null
+    }
+  },
+  "trusted_model_artifacts": {
+    "supervised": {
+      "path": "artifacts/paysim_v2/random_forest.joblib",
+      "sha256": "0292f5ea763cf436bbf324b7d8f028a3791f9c31927717bd9026afaedecffbf5"
+    },
+    "baseline_anomaly": {
+      "path": "artifacts/anomaly_detection_behavioral_1m/isolation_forest_baseline_matched.joblib",
+      "sha256": "30b5c1d8d18a1a84ba4dc8b176f35377567f88130c77e555064ac70e2983b59a"
+    },
+    "behavioral_anomaly": {
+      "path": "artifacts/anomaly_detection_behavioral_1m/isolation_forest_behavioral.joblib",
+      "sha256": "8fa657f3224918e7aa324b76a8f526818e2ade669db352a6eb7b60ec2fa75173"
+    }
+  },
+  "verification": {
+    "implementation": "src/risk_engine/trusted_artifacts.py",
+    "path_confinement": true,
+    "exact_path_allowlist": true,
+    "checksum_before_deserialization": true,
+    "caller_supplied_checksum_accepted": false,
+    "modified_artifact_loaded": false
+  },
+  "validation": {
+    "baseline_full_suite": "195 passed, 1 skipped",
+    "focused_model_loading_tests": "8 passed",
+    "focused_risk_security_suite": "81 passed, 1 skipped",
+    "final_full_suite": "203 passed, 1 skipped",
+    "frozen_module4_to_7_artifacts_unchanged": true,
+    "models_retrained": false,
+    "scores_rescored": false,
+    "threshold_changed": false
+  },
+  "remaining_limitations": [
+    "SHA-256 establishes equality with the trusted baseline but does not prove serialized-object safety.",
+    "The source-controlled checksum mapping assumes protected source provenance.",
+    "Production requires authenticated manifests or signatures, isolated deserialization, and dependency locking.",
+    "No arbitrary user-supplied pickle or joblib path is supported."
+  ]
+}

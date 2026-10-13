@@ -1,0 +1,127 @@
+{
+  "architecture_version": "module6_dashboard_v1_frozen",
+  "direct_module4_reference": {
+    "architecture_version": "module4_stage4_rf_primary_v1",
+    "path": "src/risk_engine/final_architecture.py",
+    "relationship": "Dashboard details uses FinalRiskAssessmentConfig for frozen threshold and provenance; Module 4 source and artifacts remain frozen.",
+    "sha256": "d531f6e8d0f84f092e048a930fee1b830a7e7330fd90c3609c98e3790d62332d"
+  },
+  "documentation_evidence_sha256": {
+    "docs/module6_stage1_dashboard_plan.md": "4c99e2476d0222773424e6d1c2e641c60f2c7a28587e6b3b51b20c33d572c46a",
+    "docs/module6_stage6_validation.md": "76b4db2fd3ef63bda850cbceaacc4dbc3a7f477e1dbe5fa991d73b27d40f9f8b"
+  },
+  "freeze_date_utc": "2026-10-13T01:05:38.159697+00:00",
+  "freeze_status": "frozen",
+  "future_scope": [
+    "Module 7 monitoring",
+    "Module 8 cybersecurity testing and operational controls",
+    "No automatic retraining is included in this freeze."
+  ],
+  "immutable_artifact_sha256": {
+    "artifacts/dashboard_metadata_index_v1/holdout_metadata.parquet": "a3062d6d10af8785c474bc9c7b148239e0b3c2355dbe0102734492a978055cc5",
+    "artifacts/dashboard_metadata_index_v1/manifest.json": "9f39fd98b84f454d1da781740edc5c0867a0656cb0288b4fdb507a757a3f2492",
+    "artifacts/module4_final_holdout_recovery_v1/complete_holdout_scores.csv": "16ab136cab8313db935fb30a6f182ddd15db7de28c9d76bdfa089345a35f9410",
+    "artifacts/module4_final_holdout_recovery_v1/final_holdout_recovery_report.json": "7ce44c3215f5888839faabe68fa4b9d8ca09aac88a0d96a183664e5468dc89a5",
+    "artifacts/module4_final_holdout_recovery_v1/recovery_manifest.json": "a03ed580339f46c136739896acfc197e564855c1744ad0beb274a874fd472c15",
+    "artifacts/module5_authoritative_v1/manifest.json": "91e6156efbe9bd29a2d06030f1c8a90e33d518c11b7c48b52b24f66f49d3cea1",
+    "artifacts/module5_authoritative_v1/module5_v1_freeze_manifest.json": "cba41469946685007cf475c3bfe2661076b19ca028bc883d1920f724aaa6d83c",
+    "requirements.txt": "d5a7e19fdbc745f97a5c05633beae2992ebf466b520c0840a1671669574aa25d"
+  },
+  "limitations": [
+    "PaySim is simulated and does not establish real-world deployment impact.",
+    "Dashboard and SQLite feedback are local single-user components.",
+    "Retrieval is deterministic lexical TF-IDF over curated summaries.",
+    "Persisted holdout scores omit per-transaction rule IDs and behavioral feature columns.",
+    "Module 4 and Module 5 metrics are historical frozen research results."
+  ],
+  "metadata_sidecar": {
+    "manifest_sha256": "9f39fd98b84f454d1da781740edc5c0867a0656cb0288b4fdb507a757a3f2492",
+    "parquet_sha256": "a3062d6d10af8785c474bc9c7b148239e0b3c2355dbe0102734492a978055cc5",
+    "path": "artifacts/dashboard_metadata_index_v1",
+    "row_count": 955744,
+    "source_sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+    "step_range": [
+      378,
+      743
+    ],
+    "version": "dashboard_metadata_index_v1"
+  },
+  "module4_dependency": {
+    "architecture_version": "module4_stage4_rf_primary_v1",
+    "manifest_path": "artifacts/module4_final_holdout_recovery_v1/recovery_manifest.json",
+    "manifest_sha256": "a03ed580339f46c136739896acfc197e564855c1744ad0beb274a874fd472c15",
+    "threshold": 0.3494391872980995,
+    "threshold_provenance": "Module 4 development calibration, steps 46-200; maximum calibration F1; frozen before steps 201-377 evaluation."
+  },
+  "module5_dependency": {
+    "manifest_path": "artifacts/module5_authoritative_v1/module5_v1_freeze_manifest.json",
+    "manifest_sha256": "cba41469946685007cf475c3bfe2661076b19ca028bc883d1920f724aaa6d83c",
+    "version": "module5_authoritative_v1"
+  },
+  "module6_source_code_sha256": {
+    "src/dashboard/__init__.py": "d6870edb866c90a2cba870109f7c786b36db28b7e48518ca5fcbef805e9155c2",
+    "src/dashboard/app.py": "0818cf7b63dba59b54b86c493c9452e4a6dfb0930ebae73c4d6b13023d5ae647",
+    "src/dashboard/build_metadata_index.py": "bd34e5bf49e3e79305f41b72c4c1f9fc3a9cb4a8ec8cd265cac9c65712c4dd25",
+    "src/dashboard/config.py": "1edfa2fc94bb555ddcc4674792ec16e60ea5167c4022edac1081ca8ed702ea88",
+    "src/dashboard/data_access.py": "1492d3a6701756e67e3e365d5fef8b1d0083c1e48c6fb78b26116f3d0bb97c12",
+    "src/dashboard/details.py": "b507a8f7a48506918dbc33a44409445f1b65b31e703c70b9c6795808a08eba1c",
+    "src/dashboard/feedback_store.py": "872acc904c8f38da0f514410b6eacf271b50bc8335a46d2ea0e1b11fa1c667a5",
+    "src/dashboard/metadata_index.py": "4ab9347a4c9080080729a9dad78ee5b717b82c0c51fb00c73bbfa85ddff385a0"
+  },
+  "module6_test_file_sha256": {
+    "tests/test_dashboard_data_access.py": "630d30b77c0f6ea731d23e6c7887301a2acd7f6ad2d43986d0e0624f514f333c",
+    "tests/test_dashboard_details.py": "577f8143b37db81a54b36b4947b51e5f461599ed6f85aac5327d50b357d31179",
+    "tests/test_dashboard_feedback.py": "39e38870a7c7ffdd0e2f2e5c7e9aa566aa38824f6fc9ce21c6c22ee03e20a3d8",
+    "tests/test_dashboard_metadata_index.py": "e5bced17a9170a6388ffbdbe1add4abb92a10af813e41bc019733ab6ceb033b4"
+  },
+  "mutable_documentation": {
+    "immutable_dependency": false,
+    "path": "IMPLEMENTATION_STATUS.md",
+    "sha256": "bffc9c327fb1d6e640ff24c8e7c669c582fd7210c4a2e38a31a6ebced8bbe298"
+  },
+  "mutable_feedback_exclusions": {
+    "dashboard_default_path": "artifacts/module6_feedback/production_reviews.sqlite3",
+    "demonstration_events_preserved": 3,
+    "demonstration_path": "artifacts/module6_feedback/reviews.sqlite3",
+    "excluded_from_immutable_inventory": true,
+    "reason": "Append-only analyst assessments are mutable and contain demonstration history; neither database is a frozen dependency."
+  },
+  "performance_evidence": {
+    "cold_score_cache_load_seconds": 1.527,
+    "cold_sidecar_load_seconds": 1.5213,
+    "dashboard_cold_start_to_health_seconds": 6.653,
+    "feedback_read_seconds": 0.0034,
+    "feedback_save_seconds": 0.0496,
+    "warm_details_last_row_seconds": 0.0034,
+    "warm_details_row0_seconds": 0.0055,
+    "warm_sidecar_lookup_seconds": 0.0004
+  },
+  "python_runtime": {
+    "executable": "C:/Users/W7Z7DBJ/AppData/Local/Microsoft/WindowsApps/python3.13.exe",
+    "version": "3.13.14"
+  },
+  "raw_dataset": {
+    "path": "data/raw/PS_20174392719_1491204439457_log.csv",
+    "provenance": "PaySim simulated mobile-money transaction dataset used by the frozen Module 4 holdout and derived read-only metadata sidecar.",
+    "sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+    "size_bytes": 493534783
+  },
+  "requirements_sha256": "d5a7e19fdbc745f97a5c05633beae2992ebf466b520c0840a1671669574aa25d",
+  "resolved_dependencies": {
+    "joblib": "1.6.0",
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.0",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.9.1",
+    "streamlit": "1.37.0"
+  },
+  "schema_version": "module6_v1_freeze_manifest_v1",
+  "scope": "Local Streamlit analyst dashboard over frozen Module 4 scores, validated PaySim metadata, and frozen Module 5 authoritative fraud intelligence.",
+  "validation_evidence": {
+    "failed": 0,
+    "full_test_command": "python -m pytest -q",
+    "passed": 110,
+    "source": "Stage 6 validation evidence; no expensive validation rerun required for freeze."
+  }
+}

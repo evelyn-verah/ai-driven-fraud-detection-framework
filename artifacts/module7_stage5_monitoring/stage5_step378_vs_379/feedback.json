@@ -1,0 +1,53 @@
+{
+  "analysis_timestamp_utc": "2026-10-13T17:41:21.574381+00:00",
+  "data_quality": {
+    "status": "empty"
+  },
+  "distinct_reviewed_transaction_count": 0,
+  "event_count": 0,
+  "limitations": [
+    "Analyst statuses are workflow assessments, not verified fraud labels.",
+    "Historical event counts and latest status are distinct; latest status is not a final outcome.",
+    "Feedback analysis does not modify model scores, thresholds, or training data."
+  ],
+  "risk_score_alignment": {
+    "available": false,
+    "reason": "no review events"
+  },
+  "schema_version": "module7_stage4_feedback_v1",
+  "source_database": {
+    "path": "C:\\Users\\W7Z7DBJ\\Downloads\\fraud-detection-framework-v2-module1\\fraud-detection-framework-v2\\artifacts\\module6_feedback\\production_reviews.sqlite3",
+    "status": "empty"
+  },
+  "status_distribution": [
+    {
+      "count": 0,
+      "proportion": 0.0,
+      "status": "Unreviewed"
+    },
+    {
+      "count": 0,
+      "proportion": 0.0,
+      "status": "Needs Investigation"
+    },
+    {
+      "count": 0,
+      "proportion": 0.0,
+      "status": "False Positive Suspected"
+    },
+    {
+      "count": 0,
+      "proportion": 0.0,
+      "status": "Escalated"
+    },
+    {
+      "count": 0,
+      "proportion": 0.0,
+      "status": "Reviewed / Closed"
+    }
+  ],
+  "time_window": {
+    "end_utc": null,
+    "start_utc": null
+  }
+}

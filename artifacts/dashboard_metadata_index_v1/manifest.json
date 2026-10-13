@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-10-12T23:01:01.921281+00:00",
+  "first_row_id": 0,
+  "first_step": 378,
+  "index_columns": [
+    "row_id",
+    "step",
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFraud"
+  ],
+  "index_file": "holdout_metadata.parquet",
+  "last_row_id": 955743,
+  "last_step": 743,
+  "parquet_sha256": "a3062d6d10af8785c474bc9c7b148239e0b3c2355dbe0102734492a978055cc5",
+  "provenance": "Derived read-only from the validated PaySim source and frozen Module 4 score cache; labels are retained only for alignment validation.",
+  "row_count": 955744,
+  "schema_version": "dashboard_metadata_index_v1",
+  "score_cache_row_count": 955744,
+  "source_columns": [
+    "step",
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFraud"
+  ],
+  "source_path": "C:\\Users\\W7Z7DBJ\\Downloads\\fraud-detection-framework-v2-module1\\fraud-detection-framework-v2\\data\\raw\\PS_20174392719_1491204439457_log.csv",
+  "source_sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+  "validation_status": "passed"
+}

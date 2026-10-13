@@ -1,0 +1,34 @@
+{
+  "schema": "module8_stage5_dependency_inventory_v1",
+  "source": "requirements.txt and python -m pip list --format=freeze",
+  "interpreter": "Python 3.13.14",
+  "pip_check": "No broken requirements found",
+  "direct_requirements": {
+    "numpy": ">=1.26,<3",
+    "pandas": ">=2.0,<3",
+    "scikit-learn": ">=1.4,<2",
+    "joblib": ">=1.3,<2",
+    "pytest": ">=8,<10",
+    "streamlit": ">=1.37,<2",
+    "pyarrow": ">=25,<26",
+    "altair": "==5.5.0"
+  },
+  "observed_versions": {
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pytest": "9.1.1",
+    "streamlit": "1.37.0",
+    "pyarrow": "25.0.0",
+    "altair": "5.5.0"
+  },
+  "assessment": {
+    "direct_requirements_pinned": false,
+    "altair_pinned": true,
+    "transitive_environment_fully_pinned": false,
+    "local_sbom_possible": true,
+    "known_vulnerabilities": "not assessed online in this offline validation",
+    "external_services_scanned": false
+  }
+}

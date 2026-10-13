@@ -1,0 +1,81 @@
+{
+  "architecture_version": "module5_v1_frozen",
+  "evaluation_artifacts_sha256": {
+    "artifacts/module5_authoritative_v1/chunks.jsonl": "ce1ca39d941a7e934709e7d19ed7a12527724190476e1bad240fcd1275a25c02",
+    "artifacts/module5_authoritative_v1/documents.jsonl": "ac30dc57f9e585a047b3a91df0b2eedeca2ee4cb2f4bfb1c74e8fd3e1befe4be",
+    "artifacts/module5_authoritative_v1/manifest.json": "91e6156efbe9bd29a2d06030f1c8a90e33d518c11b7c48b52b24f66f49d3cea1",
+    "artifacts/module5_authoritative_v1/stage6c_evaluation_report.json": "e3ecbb48499957f3511fed2ad8cac4f7305d52dd887ea91426edea12306f4ac7",
+    "artifacts/module5_authoritative_v1/stage6d_retrieval_comparison.json": "c979048bb370a5a12ed4696a4e98c5ce4acc6744ac467499052e5d94fe0305e3",
+    "data/fraud_intelligence/authoritative_documents.json": "b6844ae696490151fe5db7682ff6a3556ce51ee00c2bbc0fd30132622258f143",
+    "data/fraud_intelligence/authoritative_retrieval_development.json": "847f760318842e9eceae731058fba4be17680f4dfc8cd7875854ee1f69f08007",
+    "data/fraud_intelligence/authoritative_retrieval_evaluation.json": "66fc1d1af5ec99ce8c76d54d7b11d5758706d7ba66ed3095e2a883784afd0fb2",
+    "data/fraud_intelligence/authoritative_source_review_manifest.json": "7f0bb2ceb574a8b993010cef986b845a9adbbe308c9a9dc85b07c911eef48acf"
+  },
+  "final_stage6d_metrics": {
+    "existing_31_case_diagnostic": {
+      "case_count": 31,
+      "citation_correctness": 1.0,
+      "filter_correctness": 1.0,
+      "mean_reciprocal_rank": 0.9320987654320988,
+      "no_evidence_case_count": 4,
+      "no_evidence_rejection_accuracy": 1.0,
+      "precision_at_3": 0.4691358024691358,
+      "recall_at_3": 0.9012345679012346,
+      "relevant_case_count": 27
+    },
+    "independent_12_case_development": {
+      "case_count": 12,
+      "citation_correctness": 1.0,
+      "filter_correctness": 1.0,
+      "mean_reciprocal_rank": 0.8888888888888888,
+      "no_evidence_case_count": 3,
+      "no_evidence_rejection_accuracy": 1.0,
+      "precision_at_3": 0.4074074074074074,
+      "recall_at_3": 0.8703703703703703,
+      "relevant_case_count": 9
+    }
+  },
+  "freeze_date": "2026-10-12",
+  "freeze_schema_version": "module5_freeze_manifest_v1",
+  "frozen_components": [
+    "src/fraud_intelligence/contracts.py",
+    "src/fraud_intelligence/ingestion.py",
+    "src/fraud_intelligence/knowledge_base.py",
+    "src/fraud_intelligence/retrieval.py",
+    "src/fraud_intelligence/explanations.py",
+    "src/fraud_intelligence/safety.py",
+    "src/fraud_intelligence/integration.py"
+  ],
+  "knowledge_base": {
+    "chunk_count": 10,
+    "document_count": 10,
+    "manifest_sha256": "91e6156efbe9bd29a2d06030f1c8a90e33d518c11b7c48b52b24f66f49d3cea1",
+    "validation_status": "passed",
+    "version": "module5_authoritative_v1"
+  },
+  "limitations": [
+    "Lexical TF-IDF retrieval remains sensitive to wording and corpus vocabulary.",
+    "Some multi-pattern cases retrieve only a subset of expected documents in top three.",
+    "Evaluation fixtures are small diagnostic sets, not production effectiveness estimates.",
+    "Authoritative KB entries are independently authored summaries of government publications, not original publication text or verbatim quotations.",
+    "PaySim is simulated and the prototype has no production deployment evidence."
+  ],
+  "module4_immutability": "No Module 4 source, model, threshold, cache, or evaluation artifact was modified.",
+  "scope": "Module 5 research prototype: contracts, authoritative KB, deterministic retrieval, grounded explanations, and read-only Module 4 integration",
+  "source_code_sha256": {
+    "src/fraud_intelligence/__init__.py": "239e788b0211c1c5265751d136cbf6bb944f6a39e5cf201e4566011fd1c596f7",
+    "src/fraud_intelligence/contracts.py": "df3ae1d4b0dc562ba0afc8f8bc219a14c10cd062b9a94e3b206f95fcccd82a8b",
+    "src/fraud_intelligence/explanations.py": "aea2182db92b2974f3f4f6d551ae1a4a9b22d2439bcc523980d363a91461be3c",
+    "src/fraud_intelligence/ingestion.py": "58906cfcf3916e02a3ed5670d694ee28372dfa0468cd21eb4958595388708212",
+    "src/fraud_intelligence/integration.py": "55e2e7089466a3c1937260fad2273494c286722fae31ab9870dc3485d2c2d756",
+    "src/fraud_intelligence/knowledge_base.py": "99a4435b91343c6216e01bfcef8bd70488608d918bf48eba4880b65f16caef52",
+    "src/fraud_intelligence/retrieval.py": "b05b536e18ef5bc0149622fa35debc6568fe4068db6099ba8ad4c55ee631f9ff",
+    "src/fraud_intelligence/safety.py": "64807b016bf28f6cb237638c460f13a93ffbe6747af84562988b787efcabbe51"
+  },
+  "test_results": {
+    "command": "python -m pytest -q",
+    "failed": 0,
+    "passed": 89,
+    "test_count": 89
+  }
+}

@@ -1,0 +1,273 @@
+﻿{
+  "version": "module4_development_v1",
+  "cache_source": "reused_existing_cache",
+  "cache_path": "artifacts\\module4_development_v1\\score_cache.csv",
+  "cache_columns": [
+    "row_id",
+    "step",
+    "isFraud",
+    "supervised_score",
+    "anomaly_baseline_raw",
+    "anomaly_behavioral_raw",
+    "rule_score",
+    "rule_reasons_json"
+  ],
+  "calibration_steps": [
+    46,
+    200
+  ],
+  "evaluation_steps": [
+    201,
+    377
+  ],
+  "final_holdout_accessed": false,
+  "calibration_rows": 1379508,
+  "evaluation_rows": 3024694,
+  "evaluation_fraud_count": 1949,
+  "runtime_seconds": 144.42,
+  "peak_resident_memory_mb": 1610.0,
+  "memory_measurement_note": "Windows API probe was unavailable inside the runner; 1610 MB is the peak working-set observation recorded from the active scoring process during the source pass.",
+  "selection_policy": "Five predeclared configurations; thresholds and anomaly CDF normalizers fit on calibration labels/rows only. Evaluation labels are not used for selection.",
+  "results": {
+    "random_forest_only": {
+      "weights": {
+        "supervised": 1.0,
+        "anomaly_baseline": 0.0,
+        "anomaly_behavioral": 0.0,
+        "rules": 0.0
+      },
+      "calibration_threshold": 0.3494391872980995,
+      "metrics": {
+        "average_precision": 0.5932335769815933,
+        "roc_auc": 0.9939800730106951,
+        "precision_at_calibrated_threshold": 0.6595342983008181,
+        "recall_at_calibrated_threshold": 0.5377116469984607,
+        "false_positives_at_calibrated_threshold": 541,
+        "fraud_captured_at_calibrated_threshold": 1048,
+        "calibrated_alert_count": 1589,
+        "alert_budgets": {
+          "10": {
+            "alerts": 10,
+            "fraud_captured": 10,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.00513083632632119
+          },
+          "50": {
+            "alerts": 50,
+            "fraud_captured": 50,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.025654181631605953
+          },
+          "100": {
+            "alerts": 100,
+            "fraud_captured": 100,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.051308363263211906
+          },
+          "500": {
+            "alerts": 500,
+            "fraud_captured": 496,
+            "false_positives": 4,
+            "precision": 0.992,
+            "recall": 0.25448948178553105
+          }
+        }
+      }
+    },
+    "random_forest_plus_baseline_anomaly": {
+      "weights": {
+        "supervised": 1.0,
+        "anomaly_baseline": 1.0,
+        "anomaly_behavioral": 0.0,
+        "rules": 0.0
+      },
+      "calibration_threshold": 0.5288344964685198,
+      "metrics": {
+        "average_precision": 0.4658521607360495,
+        "roc_auc": 0.8560710425692746,
+        "precision_at_calibrated_threshold": 0.5949526813880126,
+        "recall_at_calibrated_threshold": 0.48383786557208824,
+        "false_positives_at_calibrated_threshold": 642,
+        "fraud_captured_at_calibrated_threshold": 943,
+        "calibrated_alert_count": 1585,
+        "alert_budgets": {
+          "10": {
+            "alerts": 10,
+            "fraud_captured": 10,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.00513083632632119
+          },
+          "50": {
+            "alerts": 50,
+            "fraud_captured": 50,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.025654181631605953
+          },
+          "100": {
+            "alerts": 100,
+            "fraud_captured": 100,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.051308363263211906
+          },
+          "500": {
+            "alerts": 500,
+            "fraud_captured": 498,
+            "false_positives": 2,
+            "precision": 0.996,
+            "recall": 0.25551564905079527
+          }
+        }
+      }
+    },
+    "random_forest_plus_behavioral_anomaly": {
+      "weights": {
+        "supervised": 1.0,
+        "anomaly_baseline": 0.0,
+        "anomaly_behavioral": 1.0,
+        "rules": 0.0
+      },
+      "calibration_threshold": 0.5297445743895546,
+      "metrics": {
+        "average_precision": 0.4195777773174075,
+        "roc_auc": 0.8270048123029904,
+        "precision_at_calibrated_threshold": 0.5855539971949509,
+        "recall_at_calibrated_threshold": 0.4284248332478194,
+        "false_positives_at_calibrated_threshold": 591,
+        "fraud_captured_at_calibrated_threshold": 835,
+        "calibrated_alert_count": 1426,
+        "alert_budgets": {
+          "10": {
+            "alerts": 10,
+            "fraud_captured": 10,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.00513083632632119
+          },
+          "50": {
+            "alerts": 50,
+            "fraud_captured": 50,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.025654181631605953
+          },
+          "100": {
+            "alerts": 100,
+            "fraud_captured": 100,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.051308363263211906
+          },
+          "500": {
+            "alerts": 500,
+            "fraud_captured": 498,
+            "false_positives": 2,
+            "precision": 0.996,
+            "recall": 0.25551564905079527
+          }
+        }
+      }
+    },
+    "random_forest_plus_both_anomalies": {
+      "weights": {
+        "supervised": 1.0,
+        "anomaly_baseline": 1.0,
+        "anomaly_behavioral": 1.0,
+        "rules": 0.0
+      },
+      "calibration_threshold": 0.7237289156969737,
+      "metrics": {
+        "average_precision": 0.3762067208350833,
+        "roc_auc": 0.7891441092341254,
+        "precision_at_calibrated_threshold": 0.9085213032581454,
+        "recall_at_calibrated_threshold": 0.3719856336582863,
+        "false_positives_at_calibrated_threshold": 73,
+        "fraud_captured_at_calibrated_threshold": 725,
+        "calibrated_alert_count": 798,
+        "alert_budgets": {
+          "10": {
+            "alerts": 10,
+            "fraud_captured": 10,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.00513083632632119
+          },
+          "50": {
+            "alerts": 50,
+            "fraud_captured": 50,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.025654181631605953
+          },
+          "100": {
+            "alerts": 100,
+            "fraud_captured": 100,
+            "false_positives": 0,
+            "precision": 1.0,
+            "recall": 0.051308363263211906
+          },
+          "500": {
+            "alerts": 500,
+            "fraud_captured": 498,
+            "false_positives": 2,
+            "precision": 0.996,
+            "recall": 0.25551564905079527
+          }
+        }
+      }
+    },
+    "random_forest_plus_anomalies_plus_rules": {
+      "weights": {
+        "supervised": 1.0,
+        "anomaly_baseline": 1.0,
+        "anomaly_behavioral": 1.0,
+        "rules": 1.0
+      },
+      "calibration_threshold": 0.7608557730544073,
+      "metrics": {
+        "average_precision": 0.10513529389344423,
+        "roc_auc": 0.6806189102625223,
+        "precision_at_calibrated_threshold": 0.5691244239631337,
+        "recall_at_calibrated_threshold": 0.1267316572601334,
+        "false_positives_at_calibrated_threshold": 187,
+        "fraud_captured_at_calibrated_threshold": 247,
+        "calibrated_alert_count": 434,
+        "alert_budgets": {
+          "10": {
+            "alerts": 10,
+            "fraud_captured": 0,
+            "false_positives": 10,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "50": {
+            "alerts": 50,
+            "fraud_captured": 34,
+            "false_positives": 16,
+            "precision": 0.68,
+            "recall": 0.017444843509492047
+          },
+          "100": {
+            "alerts": 100,
+            "fraud_captured": 83,
+            "false_positives": 17,
+            "precision": 0.83,
+            "recall": 0.04258594150846588
+          },
+          "500": {
+            "alerts": 500,
+            "fraud_captured": 248,
+            "false_positives": 252,
+            "precision": 0.496,
+            "recall": 0.12724474089276552
+          }
+        }
+      }
+    }
+  }
+}
