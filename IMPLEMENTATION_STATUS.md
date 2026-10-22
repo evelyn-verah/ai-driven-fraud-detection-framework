@@ -1,6 +1,6 @@
 # Implementation Status
 
-## Module 8 Stage 6 — Final security validation and V1 freeze (complete)
+## Module 8 Stage 6 Final security validation and V1 freeze (complete)
 
 Independently validated the supported ingestion, secure dashboard launcher,
 authorization facade, SQLite/filesystem boundaries, trusted model loaders, and
@@ -35,7 +35,7 @@ passes **203 tests with 1 skip**. No model, threshold, score, retrieval,
 dashboard, or monitoring artifact changed. Details are in
 [module4_trusted_model_loading_maintenance.md](docs/module4_trusted_model_loading_maintenance.md).
 
-## Module 6 V1.2 — Dashboard authorization security maintenance (complete)
+## Module 6 V1.2 Dashboard authorization security maintenance (complete)
 
 Added a separately versioned secure dashboard execution boundary in
 [secure_app.py](src/dashboard/secure_app.py), using the Module 8 Stage 4
@@ -54,7 +54,7 @@ hash and command are recorded in the V1.2 manifest. Preserved historical source
 snapshots remain outside the supported launcher. Real identity integration is
 still deferred.
 
-## Module 8 Stage 5 — Security regression, enforcement coverage, and dependency review (complete; freeze blocked)
+## Module 8 Stage 5 Security regression, enforcement coverage, and dependency review (complete; freeze blocked)
 
 Independently reviewed actual dashboard, ingestion, monitoring, feedback, and
 model-loading entry points. Added [test_module8_stage5_security_regression.py](tests/test_module8_stage5_security_regression.py)
@@ -75,7 +75,7 @@ Dependency findings and the local inventory are documented in
 [module8_stage5_dependency_review.md](docs/module8_stage5_dependency_review.md)
 and [module8_stage5_security_regression.md](docs/module8_stage5_security_regression.md).
 
-## Module 8 Stage 4 — Dashboard access controls and sensitive-data protection (complete)
+## Module 8 Stage 4 Dashboard access controls and sensitive-data protection (complete)
 
 Added the separate deny-by-default [dashboard_access.py](src/security/dashboard_access.py)
 facade. It defines Viewer, Analyst, and Administrator prototype roles,
@@ -88,7 +88,7 @@ tests. Real authentication, signed sessions, CSRF protection, and production
 RBAC remain outside this research-prototype stage. Details are in
 [module8_stage4_dashboard_security.md](docs/module8_stage4_dashboard_security.md).
 
-## Module 8 Stage 2 — Input validation and secure data handling (2026-10-13)
+## Module 8 Stage 2 Input validation and secure data handling (2026-10-13)
 
 - Added the additive security boundary in `src/security/input_validation.py`
   and its package exports. It validates required schemas, finite numeric values,
@@ -108,7 +108,7 @@ RBAC remain outside this research-prototype stage. Details are in
 - Detailed rules, limits, threat mapping, compatibility, and remaining risks
   are documented in `docs/module8_stage2_input_security.md`.
 
-## Module 8 Stage 1 — Cybersecurity threat modeling and security testing architecture (2026-10-13)
+## Module 8 Stage 1 Cybersecurity threat modeling and security testing architecture (2026-10-13)
 
 - Verified the frozen Module 7 V1 monitoring baseline and reviewed the
   dashboard, monitoring, ingestion, risk-engine, model-adapter, metadata-sidecar,
@@ -127,7 +127,7 @@ RBAC remain outside this research-prototype stage. Details are in
   manifests were not modified. Module 8 Stages 2–6, retraining, MLflow, and
   Module 9 work were not started.
 
-## Module 7 Stage 6 — V1 validation and freeze (2026-10-13)
+## Module 7 Stage 6 V1 validation and freeze (2026-10-13)
 
 - Independently validated the complete Module 7 monitoring system and froze it
   as `module7_v1_frozen`. The manifest is
@@ -145,7 +145,7 @@ RBAC remain outside this research-prototype stage. Details are in
   remains mutable workflow data. No retraining, threshold change, MLflow, or
   Module 8 work was started.
 
-## Module 7 Stage 5 — Monitoring lifecycle and reproducibility (2026-10-13)
+## Module 7 Stage 5 Monitoring lifecycle and reproducibility (2026-10-13)
 
 - Recovery verification confirmed Modules 1–6, Module 7 Stages 1–4, and all
   frozen Module 4–6 artifacts are present. The pre-change full suite passed
@@ -257,7 +257,7 @@ This repository is the current local implementation of the **AI-Driven Fraud Det
 
 ## Completed
 
-### Module 1 — Data ingestion and preparation
+### Module 1  Data ingestion and preparation
 
 - PaySim schema validation and bounded CSV inspection are implemented in `src/ingestion/adapters.py`.
 - PaySim preparation validates binary labels, numeric transaction fields, and non-negative amounts.
@@ -265,7 +265,7 @@ This repository is the current local implementation of the **AI-Driven Fraud Det
 - A command-line inspection/preparation entry point exists in `src/ingestion/cli.py`.
 - Ingestion tests cover valid input, missing columns, invalid labels, and inspection output.
 
-### Module 2 — Supervised fraud baselines
+### Module 2 Supervised fraud baselines
 
 - `train_paysim.py` implements chronological train/test modeling with Logistic Regression and Random Forest.
 - `train_paysim_v2.py` implements chronological train/validation/test evaluation, validation-based threshold selection, and saved model artifacts.
@@ -273,7 +273,7 @@ This repository is the current local implementation of the **AI-Driven Fraud Det
 - The latest recorded Random Forest test metrics are precision `0.56`, recall `0.5490`, F1 `0.5545`, and ROC-AUC `0.9851`.
 - Existing serialized models and metrics under `artifacts/paysim` and `artifacts/paysim_v2` are preserved.
 
-### Module 3 — Initial anomaly-detection baseline
+### Module 3 Initial anomaly-detection baseline
 
 - `src/anomaly_detection/train_isolation_forest.py` trains an unsupervised Isolation Forest.
 - The current baseline reads a bounded PaySim sample, keeps whole simulation steps together, fits preprocessing on training data only, and evaluates on later steps.
@@ -286,7 +286,7 @@ This repository is the current local implementation of the **AI-Driven Fraud Det
   - top-100 fraud detected: `0`
 - The original model and metrics files under `artifacts/anomaly_detection` are not to be overwritten.
 
-### Module 3 — Behavioral analytics increment
+### Module 3 Behavioral analytics increment
 
 - `src/anomaly_detection/behavioral_features.py` computes prior sender/receiver history features in chronological `step` batches.
 - Same-step transactions are transformed before any same-step state update, so they cannot see one another's activity.
@@ -309,7 +309,7 @@ This repository is the current local implementation of the **AI-Driven Fraud Det
 - Project guidance, Module 1 guidance, next steps, and a development log are present.
 - The project contains the raw PaySim CSV, a 100k processed sample, and saved model artifacts.
 
-### Module 4 — Integrated risk assessment, Stages 1–2
+### Module 4 Integrated risk assessment, Stages 1–2
 
 - The earlier 140,713-row count for steps 42–45 came from the first 1,000,000 CSV rows and ended partway through step 45. The full file contains 143,387 rows across complete steps 42–45, including 2,674 additional step-45 rows.
 - The full chronology contains steps 1–743 and 6,362,620 transactions. The approved Module 4 development period is steps 46–377; the untouched final holdout is steps 378–743. Steps 42–45 remain diagnostic-only.
