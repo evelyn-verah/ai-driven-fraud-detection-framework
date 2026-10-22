@@ -62,8 +62,4 @@ before use. Do not load `.joblib` or pickle files from untrusted sources.
 
 ## Research-prototype limitations
 
-This is not a production financial platform. It lacks managed identity,
-signed sessions, enterprise RBAC, signed artifact provenance, fully locked
-dependencies, and isolated hostile-object deserialization. Model and monitoring
-results are frozen research artifacts over simulated PaySim data; no retraining,
-MLflow workflow, or deployment integration is included.
+This is not a production financial platform.
