@@ -130,10 +130,10 @@ def safe_feedback_summary(context: DashboardContext | None, database: str, *, tr
 
 def submit_review(context: DashboardContext | None, database: str, row_id: int, status: str,
                   reviewer_label: str, notes: str | None, *, trusted_root: str,
-                  demonstration_path: str | None = None):
+                  demonstration_path: str | None = None, production_only: bool = True):
     require_permission(context, "review.submit")
     return secure_save_review(database, row_id, status, reviewer_label, notes,
-                              trusted_root=trusted_root, production_only=True,
+                              trusted_root=trusted_root, production_only=production_only,
                               demonstration_path=demonstration_path)
 
 

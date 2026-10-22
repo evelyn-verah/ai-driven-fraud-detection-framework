@@ -21,7 +21,7 @@ python -m pip install -r requirements.txt
 python -m pytest -q
 ```
 
-The final recorded suite result is **211 passed, 1 skipped**. The skip is a
+The current full-suite result is **233 passed, 1 skipped**. The skip is a
 Windows-host-dependent symlink test. Tests use synthetic fixtures where possible
 and do not require the raw PaySim CSV.
 

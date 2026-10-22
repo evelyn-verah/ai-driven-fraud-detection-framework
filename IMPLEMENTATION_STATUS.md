@@ -364,11 +364,10 @@ The raw PaySim identifiers are available in the source CSV but are intentionally
 ### Engineering limitations
 
 - The anomaly script is a standalone experiment rather than a reusable feature-engineering module with unit tests.
-- The README architecture summary still says anomaly detection is not implemented, although the Module 3 script and artifacts now exist; documentation should be synchronized after the new experiment is established.
+- The standalone anomaly experiments are implemented, but the behavioral feature path remains an evaluation prototype rather than a production component.
 - The repository is not currently a local Git repository, so file history and change provenance cannot be inferred from Git metadata.
-- The project has no evaluated integrated risk-scoring deployment, explanation/RAG layer, dashboard, monitoring loop, feedback store, or cybersecurity test harness yet.
-- Module 4 infrastructure and calibration utilities now exist, but no development calibration/model-comparison run
-  or final-holdout evaluation has been completed.
+- The integrated risk engine, grounded retrieval layer, analyst dashboard, monitoring package, feedback store, and security test harness are implemented as local research-prototype components. They do not constitute a production deployment.
+- Module 4 infrastructure, calibration utilities, and frozen holdout evaluation are present. Future work is limited to governed operational validation and deployment integration.
 
 ## Proposed remaining roadmap
 
@@ -377,7 +376,7 @@ The raw PaySim identifiers are available in the source CSV but are intentionally
 3. **Evaluation expansion:** retain average precision, ROC-AUC, precision/recall at fixed alert counts, fraud captured in top 10/50/100/500 alerts, and split/provenance metadata. Use validation data for configuration choices.
 4. **Memory and reproducibility checks:** continue using compact dtypes, bounded columns, and step-wise processing appropriate for a 16 GB machine; record parameters and feature definitions in metrics JSON.
 5. **Documentation synchronization:** keep the README, Module 3 documentation, and development log aligned with actual experiment dates and negative as well as positive results.
-6. **Later modules:** build the integrated risk engine, grounded fraud-intelligence explanations, investigation dashboard, monitoring/retraining workflow, and cybersecurity/security-control tests only after the anomaly evaluation contract is stable.
+6. **Later modules:** add governed deployment integration, managed identity, locked dependencies, operational monitoring, and controlled retraining only after additional validation.
 
 ## Recommended immediate implementation sequence
 

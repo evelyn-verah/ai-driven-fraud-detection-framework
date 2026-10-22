@@ -56,7 +56,6 @@ def main():
 
     df = df.dropna(subset=[TARGET])
 
-    # Keep complete time steps together in chronological order.
     steps = np.sort(df["step"].unique())
 
     if len(steps) < 3:
@@ -102,16 +101,12 @@ def main():
         n_jobs=-1,
     )
 
-    # Fraud labels are not used during training.
     model.fit(X_train)
 
-    # Higher score means more anomalous.
     anomaly_scores = -model.score_samples(X_test)
 
     y_test = test[TARGET].astype(int).to_numpy()
 
-    # Rank transactions by anomaly score.
-    # Review the 100 highest-scoring transactions.
     review_count = min(100, len(y_test))
 
     ranked_indices = np.argsort(anomaly_scores)[::-1]
