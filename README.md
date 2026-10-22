@@ -1,4 +1,4 @@
-# AI-Driven Fraud Detection framework
+# Fraud Detection framework
 
 This repository is a local research prototype built around simulated PaySim
 transactions. It contains the completed eight-module architecture: ingestion,
