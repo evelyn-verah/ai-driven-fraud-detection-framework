@@ -9,11 +9,7 @@ cybersecurity testing.
 The current release freezes Module 7 as `module7_v1_frozen` and Module 8 as
 `module8_v1_frozen`. Module 6 V1.2 provides the supported fail-closed dashboard
 launcher, and the Module 4 maintenance release verifies trusted model artifacts
-before deserialization. See [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md)
-for the checkpoint history and
-[docs/module8_v1_final_security_validation.md](docs/module8_v1_final_security_validation.md)
-for the final security evidence.
-
+before deserialization. 
 ## Quick start
 
 ```bash
